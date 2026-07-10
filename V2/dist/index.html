@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Smart Epsilon — Supply Chain Intelligence &amp; Product Authentication</title>
+<meta name="description" content="Smart Epsilon gives manufacturers unit-level traceability from factory to consumer — track &amp; trace, anti-counterfeit, and loyalty on one platform." />
+<meta property="og:title" content="Smart Epsilon — Total Supply Chain Visibility" />
+<meta property="og:description" content="TrakNode provides complete supply chain visibility, while KAVACH protects your brand from counterfeits." />
+<meta name="theme-color" content="#06060f" />
+<link rel="icon" href="/smart-epsilon-redesign/V2/dist/assets/471b4d0c-dde8-4d1e-b424-0e6978ac8143-BKZez9j3.svg" type="image/svg+xml" />
+  <script type="module" crossorigin src="/smart-epsilon-redesign/V2/dist/assets/index-_KBWisod.js"></script>
+  <link rel="modulepreload" crossorigin href="/smart-epsilon-redesign/V2/dist/assets/gsap-CzGW6FVa.js">
+  <link rel="stylesheet" crossorigin href="/smart-epsilon-redesign/V2/dist/assets/index-UUie_uyE.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 6.5l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 11v6M8 8v.01M12 17v-3.5a2 2 0 0 1 4 0V17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24"><path d="M5 4h3.2l4.1 5.7L17.2 4H19l-5.4 7.1L19.5 20h-3.2l-4.4-6.1L7 20H5l5.7-7.5L5 4z" fill="currentColor"/></symbol>
+    <symbol id="icon-youtube" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 9.5v5l4.5-2.5-4.5-2.5z" fill="currentColor"/></symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="icon-route" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8.5 7.5c4 0 3 9 7 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="icon-gift" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 10v11M3 14h18M12 10c-2.5 0-4-1.5-4-3.5S10 4 12 6c2-2 4-.5 4 1.5S14.5 10 12 10z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="icon-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M16 10l5-3v10l-5-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a class="brand" href="#top" aria-label="Smart Epsilon home">
+      <img src="/smart-epsilon-redesign/V2/dist/assets/logo-D0kBFmz2.svg" alt="Smart Epsilon" width="170" height="47" />
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a class="nav-link" href="#philosophy">About</a>
+      <a class="nav-link" href="#problem">The Problem</a>
+      <div class="nav-item" data-mega>
+        <a class="nav-link nav-link--mega" href="#products" aria-expanded="false" aria-haspopup="true" aria-controls="mega-products" id="nav-products-trigger">
+          Products
+          <svg class="icon nav-chevron" width="14" height="14" aria-hidden="true"><use href="#icon-chevron"/></svg>
+        </a>
+        <div class="mega-panel" id="mega-products" role="region" aria-labelledby="nav-products-trigger" hidden>
+          <div class="mega-panel__inner">
+            <div class="mega-col mega-col--products">
+              <p class="mega-col__label">Products</p>
+              <a class="mega-link" href="#products" data-product-select="0">
+                <span class="mega-link-icon" aria-hidden="true"><svg class="icon" width="18" height="18"><use href="#icon-shield"/></svg></span>
+                <span class="mega-link-text"><strong>KAVACH</strong><span>Anti-counterfeit protection</span></span>
+              </a>
+              <a class="mega-link" href="#products" data-product-select="1">
+                <span class="mega-link-icon" aria-hidden="true"><svg class="icon" width="18" height="18"><use href="#icon-route"/></svg></span>
+                <span class="mega-link-text"><strong>TrakNode</strong><span>Live tracking from plant to shelf</span></span>
+              </a>
+              <a class="mega-link" href="#products" data-product-select="2">
+                <span class="mega-link-icon" aria-hidden="true"><svg class="icon" width="18" height="18"><use href="#icon-gift"/></svg></span>
+                <span class="mega-link-text"><strong>Loyalty</strong><span>Channel rewards that stick</span></span>
+              </a>
+              <a class="mega-link" href="#products" data-product-select="3">
+                <span class="mega-link-icon" aria-hidden="true"><svg class="icon" width="18" height="18"><use href="#icon-video"/></svg></span>
+                <span class="mega-link-text"><strong>AI Video</strong><span>CCTV intelligence</span></span>
+              </a>
+            </div>
+            <div class="mega-col mega-col--explore">
+              <p class="mega-col__label">Explore</p>
+              <a class="mega-link mega-link--simple" href="#why">
+                <span class="mega-link-text"><strong>Why Smart Epsilon</strong><span>Purpose-built, not bolted on</span></span>
+              </a>
+              <a class="mega-link mega-link--simple" href="#cases">
+                <span class="mega-link-text"><strong>Cases</strong><span>Results from the field</span></span>
+              </a>
+              <a class="mega-link mega-link--simple" href="#clients">
+                <span class="mega-link-text"><strong>Clients</strong><span>Trusted by industry leaders</span></span>
+              </a>
+              <a class="mega-link mega-link--simple" href="#cta">
+                <span class="mega-link-text"><strong>Contact</strong><span>Schedule a demo</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="nav-link" href="#clients">Clients</a>
+      <a class="nav-link" href="#cases">Cases</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-sm nav-cta" href="#cta">Contact Us <svg class="icon" width="16" height="16"><use href="#icon-arrow-right"/></svg></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu"><svg class="icon" width="20" height="20"><use href="#icon-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="stage stage--hero" id="top">
+    <div class="hero-map" id="hero-map" aria-hidden="true"></div>
+    <div class="hero-layout stage__inner">
+      <div class="hero-copy">
+        <p class="hero-label">Live supply chain intelligence</p>
+        <h1 class="hero-title">
+          Total supply chain <span class="t-accent">visibility</span>. Zero room for counterfeits.
+        </h1>
+        <p class="hero-deck">TrakNode maps every unit from plant to shelf. KAVACH verifies authenticity the moment someone scans — one platform, one unbroken chain.</p>
+        <div class="hero-actions">
+          <span data-magnetic><a class="btn btn-primary" href="#cta">Schedule a demo <svg class="icon" width="16" height="16"><use href="#icon-arrow-right"/></svg></a></span>
+          <span data-magnetic><a class="btn btn-ghost" href="#products"><svg class="icon" width="16" height="16"><use href="#icon-play"/></svg> Explore products</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-ticker" aria-hidden="true">
+      <div class="hero-ticker__track">
+        <span>320M+ units serialized</span><span>·</span>
+        <span><em>BASF</em> · <em>IFFCO</em> · <em>Corteva</em> · <em>HPCL</em></span><span>·</span>
+        <span>99.2% verified authentic</span><span>·</span>
+        <span>Live in ~6 weeks</span><span>·</span>
+        <span>320M+ units serialized</span><span>·</span>
+        <span><em>BASF</em> · <em>IFFCO</em> · <em>Corteva</em> · <em>HPCL</em></span><span>·</span>
+        <span>99.2% verified authentic</span><span>·</span>
+        <span>Live in ~6 weeks</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="stage" id="philosophy" style="padding-block:clamp(3rem,8vh,5rem);border-bottom:1px solid var(--line)">
+    <div class="stage__inner" data-reveal>
+      <p class="eyebrow">Our philosophy</p>
+      <p style="font-size:clamp(1.25rem,3vw,2rem);font-weight:700;line-height:1.35;max-width:52ch;margin-top:1rem;letter-spacing:-0.02em">
+        Fifty years in supply chain taught us one thing: visibility and trust aren't add-ons — they're the product. We turn every QR into a live identity that works for leadership, field teams, and consumers.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="stage stage--problem" id="problem">
+    <div class="problem-pin" data-problem-pin>
+      <div class="problem-sticky">
+        <div class="problem-stage">
+          <div class="problem-copy" data-problem-copy>
+            <span class="problem-index" data-problem-index>01</span>
+            <h2 class="problem-heading" data-problem-heading>Counterfeits drain your margin.</h2>
+            <p class="problem-text" data-problem-text>KAVACH gives every unit a cloud-bound identity. Customers verify authenticity by scanning — clones surface the moment they appear.</p>
+          </div>
+          <div class="problem-viz" data-problem-viz>
+            <div class="problem-viz__ring"></div>
+            <svg viewBox="0 0 100 100" fill="none" aria-hidden="true" data-problem-svg>
+              <path fill="none" stroke="#8b7fd4" stroke-width="2.25" stroke-linejoin="round" d="M50 12 L78 24 V48 C78 68 64 82 50 88 C36 82 22 68 22 48 V24 Z"/>
+              <rect x="36" y="38" width="12" height="12" rx="1.5" fill="none" stroke="#b8aef0" stroke-width="1.75"/>
+              <rect x="52" y="38" width="12" height="12" rx="1.5" fill="none" stroke="#b8aef0" stroke-width="1.75"/>
+              <rect x="36" y="54" width="12" height="12" rx="1.5" fill="none" stroke="#b8aef0" stroke-width="1.75"/>
+              <path fill="none" stroke="#8b7fd4" stroke-width="1.75" stroke-linecap="round" d="M54 56h8M54 62h4M62 62h2"/>
+              <circle cx="42" cy="44" r="2" fill="#8b7fd4"/>
+              <circle cx="58" cy="44" r="2" fill="#8b7fd4"/>
+              <circle cx="42" cy="60" r="2" fill="#8b7fd4"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="stage stage--products" id="products">
+    <div class="products-pin" data-products-pin>
+      <div class="products-sticky">
+        <div class="product-rail stage__inner">
+          <div class="product-rail__head" data-reveal>
+            <p class="eyebrow">The Product</p>
+            <h2 class="product-rail__title">Four layers of supply chain intelligence.</h2>
+          </div>
+
+          <div class="product-rail__body">
+            <div class="product-rail__tabs" role="tablist" aria-label="Products">
+              <button class="product-rail__tab is-active" type="button" role="tab" aria-selected="true" data-product-tab="0">
+                <span class="product-rail__num">01</span>
+                <span class="product-rail__name">KAVACH</span>
+                <span class="product-rail__hint">Anti-counterfeit</span>
+              </button>
+              <button class="product-rail__tab" type="button" role="tab" aria-selected="false" data-product-tab="1">
+                <span class="product-rail__num">02</span>
+                <span class="product-rail__name">TrakNode</span>
+                <span class="product-rail__hint">Live tracking</span>
+              </button>
+              <button class="product-rail__tab" type="button" role="tab" aria-selected="false" data-product-tab="2">
+                <span class="product-rail__num">03</span>
+                <span class="product-rail__name">Loyalty</span>
+                <span class="product-rail__hint">Channel rewards</span>
+              </button>
+              <button class="product-rail__tab" type="button" role="tab" aria-selected="false" data-product-tab="3">
+                <span class="product-rail__num">04</span>
+                <span class="product-rail__name">AI Video</span>
+                <span class="product-rail__hint">CCTV intelligence</span>
+              </button>
+            </div>
+
+            <div class="product-rail__stage">
+              <article class="product-panel is-active" data-product-panel="0">
+                <div class="product-panel__media">
+                  <img src="/smart-epsilon-redesign/V2/dist/assets/kavach-oySyE8vt.webp" alt="Scanning a QR code on a package to verify authenticity" width="900" height="640" loading="lazy" />
+                  <span class="product-panel__badge">✓ Verified authentic</span>
+                </div>
+                <div class="product-panel__copy">
+                  <p class="product-act__tag">KAVACH</p>
+                  <h3>Anti-counterfeit protection verified in seconds</h3>
+                  <p>Cloud-bound identities that can't be cloned. Geo-tagged scan data surfaces fakes as they happen.</p>
+                  <span data-magnetic><a class="btn btn-primary btn-sm" href="#cta">Deploy KAVACH</a></span>
+                </div>
+              </article>
+
+              <article class="product-panel" data-product-panel="1" hidden>
+                <div class="product-panel__media">
+                  <img src="/smart-epsilon-redesign/V2/dist/assets/hero-banner-BZTWCRGZ.webp" alt="Warehouse inventory with live tracking overlays" width="900" height="640" loading="lazy" />
+                  <span class="product-panel__badge product-panel__badge--live">Live · Mumbai depot</span>
+                </div>
+                <div class="product-panel__copy">
+                  <p class="product-act__tag">TrakNode</p>
+                  <h3>Real-time tracking from plant to shelf</h3>
+                  <p>Live inventory mapping, predictive routing, and proactive alerts across your entire distribution network.</p>
+                  <span data-magnetic><a class="btn btn-primary btn-sm" href="#cta">See TrakNode</a></span>
+                </div>
+              </article>
+
+              <article class="product-panel" data-product-panel="2" hidden>
+                <div class="product-panel__media">
+                  <img src="/smart-epsilon-redesign/V2/dist/assets/crypto-qr-qH5qSyfS.webp" alt="Customer scanning a QR code to earn channel loyalty rewards" width="900" height="640" loading="lazy" />
+                  <span class="product-panel__badge">Scan · Earn · Redeem</span>
+                </div>
+                <div class="product-panel__copy">
+                  <p class="product-act__tag">Loyalty</p>
+                  <h3>Reward the channel that moves your product</h3>
+                  <p>Every genuine scan rewards the person who made the sale — consumer or retailer.</p>
+                  <span data-magnetic><a class="btn btn-primary btn-sm" href="#cta">Explore loyalty</a></span>
+                </div>
+              </article>
+
+              <article class="product-panel" data-product-panel="3" hidden>
+                <div class="product-panel__media">
+                  <img src="/smart-epsilon-redesign/V2/dist/assets/ai-video-BB5xCGFF.webp" alt="CCTV security cameras used for warehouse AI video intelligence" width="900" height="640" loading="lazy" />
+                  <span class="product-panel__badge">AI Video · Live feed</span>
+                </div>
+                <div class="product-panel__copy">
+                  <p class="product-act__tag">AI Video</p>
+                  <h3>CCTV turned into supply chain intelligence</h3>
+                  <p>Loading verification, theft detection, and process compliance from footage you already capture.</p>
+                  <span data-magnetic><a class="btn btn-primary btn-sm" href="#cta">See AI Video</a></span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stage stage--stats" id="impact">
+    <div class="stats-row" data-reveal>
+      <div class="stat-item">
+        <p class="stat-num"><span data-count-to="320" data-count-suffix="M+">0</span></p>
+        <p class="stat-lbl">Units serialized</p>
+      </div>
+      <div class="stat-item">
+        <p class="stat-num"><span data-count-to="99.2" data-count-suffix="%">0</span></p>
+        <p class="stat-lbl">Verified authentic</p>
+      </div>
+      <div class="stat-item">
+        <p class="stat-num">20–25%</p>
+        <p class="stat-lbl">Stockout reduction</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="stage stage--clients" id="clients">
+    <div class="clients-intro" data-reveal>
+      <p class="eyebrow">Trust factors</p>
+      <h2>Trusted by industry leaders</h2>
+    </div>
+    <div class="clients-grid" data-reveal>
+      <div class="client-logo"><img src="/smart-epsilon-redesign/V2/dist/assets/BASF-Ca8fyvpX.svg" alt="BASF Agrochemicals" width="213" height="55" loading="lazy" /></div>
+      <div class="client-logo"><img src="data:image/png;base64,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" alt="IFFCO" width="280" height="96" loading="lazy" /></div>
+      <div class="client-logo"><img src="/smart-epsilon-redesign/V2/dist/assets/IFFCO-MC-clean-CIcoNkju.png" alt="IFFCO-MC Crop Science" width="157" height="88" loading="lazy" /></div>
+      <div class="client-logo"><img src="/smart-epsilon-redesign/V2/dist/assets/Corteva-clean-CwckfstA.png" alt="Corteva Agriscience" width="280" height="56" loading="lazy" /></div>
+      <div class="client-logo"><img src="/smart-epsilon-redesign/V2/dist/assets/HPCL-clean-CglyYjzV.png" alt="HPCL" width="333" height="72" loading="lazy" /></div>
+      <div class="client-logo"><img src="/smart-epsilon-redesign/V2/dist/assets/BASF-Nunhems-clean-DqF2IKS0.png" alt="BASF Nunhems Seeds" width="164" height="48" loading="lazy" /></div>
+      <div class="client-logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAABECAYAAABu6byBAAADW0lEQVR4nO3cT+hOWRzH8bd/409hlJAbVkPNLMaflegskLK4sTARCwrLGaYkYmGDJMVKCbFTCB0LG00dzGIaMbNBiM1hZjT+NgYzmE6dqWl67vXc597f7/k9935edTf33Hue+zx9u+fP95wHRERERERERERERERERERERERERETKGkQXJam5BcxoUbTLW7ejQD3jgccZxUu8dRcz7vsRmNPmx7yLxxvgFfAc+AW4DYT6L3jr3rbxrMeBNS2KLnnrFtFjBnf7AXrIEOATYDQwEZgOGGADcAa4k6RmKQ2jAKrOVOBskpqtNIgCqPouwZ4kNa2aqFpSAPWNg0lqJtEACqDWDnrrBv17xP7PcGAc8BmwCric87uOBb6mAYZ2+wF6gbfuPfA2Hs+Au0lqTgIHgG8yblsNbKfm9AbqkLfuA7AJCFMBrUxrQjOmACofRMdyLgnNXa0pgMq7mVP2KTWnACpvZE5ZeEPVmgKovC9yyn6n5hRAJSSpCaPY9Tlvn5AnqzUFUIeS1IS5oUMZyeDghrfuCTWneaA2JKkJk4nD4gThZGBmnP+ZnXPbURpAAdTaxiQ1G0v8rj8Dh2mAJjRh/T0SegWs9db9RQN0O4BCiqCvhUVg/eUZsNhbd52G6HYA/V3RSsnBHXxG1U6HvpG37ioN0u0+0OuKnivv+o8uMy3wtgzB+CfwAvgNeBBzYae8dfdooG4H0MuM8yMK1pN3/R90tpwjJEplgDdhTzPOjylYTxheFw1SqUEAPco4P6VgPRNyyn4tWJf0UADdzzg/N0lN2P3Qri8zzj/11nXShEmPBNBPGedHAVvaqSBJTdhqs65g/VKTAArrirPyRds+trsh5qMOxz1arZwr/4gyYEdhYSdnkpoTwLctikNwHE9SswI4AvwQ+zNDYj5qflxSOiuj+jATfKqPv0LjdXsYH+wElud0nJfEo6jd3rqH9I6FSWrKpF32e+s207AmLLyFwqTcyjg5V5UrIYAqrE8GagAF3rrvgQXxzwrKOh/zUVXNQMtAD6DAW3ctLs7a12H6Iaz++8pbt8xbF9IN0pA+0P+bsy1JavYCy4B5wOdhwBV3hY74Tw7tccxFXYt/r/Kdt64/M+8iIiIiIiIiIiIiIiIiIiIiIiIiIkIV/gE9I8eQ/oVOHAAAAABJRU5ErkJggg==" alt="UPL" width="144" height="68" loading="lazy" /></div>
+      <div class="client-logo"><img src="data:image/png;base64,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" alt="Castrol" width="193" height="65" loading="lazy" /></div>
+      <div class="client-logo"><img src="data:image/png;base64,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" alt="Syngenta" width="226" height="71" loading="lazy" /></div>
+      <div class="client-logo"><img src="data:image/png;base64,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" alt="Gulf Oil" width="196" height="63" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <!-- WHY -->
+  <section class="stage stage--why" id="why">
+    <div class="stage__inner">
+      <header class="why-head" data-reveal>
+        <p class="eyebrow">Why Smart Epsilon</p>
+        <h2 class="why-head__title">Purpose-built — not bolted on.</h2>
+        <p class="why-head__lead">Most traceability tools are ERP afterthoughts. We built the platform manufacturers actually run in the field.</p>
+      </header>
+
+      <div class="why-matrix" data-reveal>
+        <div class="why-matrix__head" aria-hidden="true">
+          <span class="why-matrix__spacer"></span>
+          <span class="why-matrix__col why-matrix__col--them">Typical bolt-on</span>
+          <span class="why-matrix__col why-matrix__col--us">Smart Epsilon</span>
+        </div>
+
+        <div class="why-matrix__row">
+          <p class="why-matrix__label">Built for</p>
+          <p class="why-matrix__them"><span class="why-x" aria-hidden="true"></span>Add-on to an ERP</p>
+          <p class="why-matrix__us"><span class="why-check" aria-hidden="true"></span>Purpose-built platform</p>
+        </div>
+        <div class="why-matrix__row">
+          <p class="why-matrix__label">Counterfeit protection</p>
+          <p class="why-matrix__them"><span class="why-x" aria-hidden="true"></span>Single QR code</p>
+          <p class="why-matrix__us"><span class="why-check" aria-hidden="true"></span>Overt + covert + forensic</p>
+        </div>
+        <div class="why-matrix__row">
+          <p class="why-matrix__label">Time to go live</p>
+          <p class="why-matrix__them"><span class="why-x" aria-hidden="true"></span>Quarters of rollout</p>
+          <p class="why-matrix__us"><span class="why-check" aria-hidden="true"></span>Live in ~6 weeks</p>
+        </div>
+        <div class="why-matrix__row">
+          <p class="why-matrix__label">Fits your stack</p>
+          <p class="why-matrix__them"><span class="why-x" aria-hidden="true"></span>Rip-and-replace</p>
+          <p class="why-matrix__us"><span class="why-check" aria-hidden="true"></span>Works with SAP, Oracle, any ERP</p>
+        </div>
+        <div class="why-matrix__row">
+          <p class="why-matrix__label">Field readiness</p>
+          <p class="why-matrix__them"><span class="why-x" aria-hidden="true"></span>Heavy retraining</p>
+          <p class="why-matrix__us"><span class="why-check" aria-hidden="true"></span>Teams trained in under a week</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICES -->
+  <section class="stage stage--voices" id="voices" aria-labelledby="voices-title">
+    <div class="stage__inner">
+      <header class="voices-head" data-reveal>
+        <p class="eyebrow">Customer voices</p>
+        <h2 id="voices-title" class="voices-head__title">Operators, not marketers.</h2>
+        <p class="voices-head__lead">What supply chain and brand-protection leaders say after going live with Smart Epsilon.</p>
+      </header>
+
+      <div
+        class="voices-slider"
+        data-voices-slider
+        data-voices-visible="2"
+        data-reveal
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Customer testimonials"
+      >
+        <div class="voices-slider__viewport">
+          <div class="voices-slider__track" aria-live="polite" aria-atomic="true">
+            <blockquote
+              class="voice is-active"
+              style="--voice-accent: #8fb0ff"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="1 of 3"
+              data-voice-slide
+            >
+              <span class="voice__mark" aria-hidden="true">&ldquo;</span>
+              <p class="voice__quote">For the first time we can see exactly what&rsquo;s moving through the channel in real time. Stockout firefighting has all but disappeared.</p>
+              <footer class="voice__meta">
+                <cite class="voice__name">VP, Supply Chain</cite>
+                <span class="voice__role">National lubricants manufacturer</span>
+              </footer>
+            </blockquote>
+
+            <blockquote
+              class="voice is-active"
+              style="--voice-accent: #5be0c8"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="2 of 3"
+              data-voice-slide
+            >
+              <span class="voice__mark" aria-hidden="true">&ldquo;</span>
+              <p class="voice__quote">Smart Epsilon&rsquo;s anti-counterfeiting solution cut counterfeit-driven complaints sharply in our first two quarters. Our field team now spots clones before customers do.</p>
+              <footer class="voice__meta">
+                <cite class="voice__name">Head of Brand Protection</cite>
+                <span class="voice__role">Agrochemicals major</span>
+              </footer>
+            </blockquote>
+
+            <blockquote
+              class="voice"
+              style="--voice-accent: #ffc978"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="3 of 3"
+              data-voice-slide
+              aria-hidden="true"
+            >
+              <span class="voice__mark" aria-hidden="true">&ldquo;</span>
+              <p class="voice__quote">It sat on top of our existing SAP setup with no rip-and-replace, and we were live in weeks. Adoption on the ground was the easy part.</p>
+              <footer class="voice__meta">
+                <cite class="voice__name">Director, Operations</cite>
+                <span class="voice__role">CPG &amp; packaged foods</span>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="voices-slider__controls">
+          <button type="button" class="voices-slider__arrow" data-voice-prev aria-label="Previous testimonials">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M11.5 3.5L6 9l5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div class="voices-slider__dots" role="tablist" aria-label="Choose testimonial pair" data-voice-dots></div>
+
+          <button type="button" class="voices-slider__arrow" data-voice-next aria-label="Next testimonials">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M6.5 3.5L12 9l-5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="voices-slider__progress" aria-hidden="true">
+          <span class="voices-slider__progress-bar" data-voice-progress></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section class="stage stage--cases" id="cases">
+    <div class="stage__inner" style="margin-bottom:2rem" data-reveal>
+      <p class="eyebrow">Case studies</p>
+      <h2 style="font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;letter-spacing:-0.02em;margin:0.5rem 0 0">From the field.</h2>
+    </div>
+    <div class="cases-bento" data-reveal>
+      <article class="case-tile case-tile--hero">
+        <div class="case-tile__media">
+          <img src="/smart-epsilon-redesign/V2/dist/assets/case-agro-OyNqwPIQ.webp" alt="Crop protection spraying across an agrochemical field" width="800" height="600" loading="lazy" />
+        </div>
+        <div class="case-tile__body">
+          <p class="case-tile__tag">Agrochemicals</p>
+          <h3>World's largest agrochemical company</h3>
+          <p>End-to-end visibility across 10+ countries with unit-level serialization at scale.</p>
+        </div>
+      </article>
+      <article class="case-tile">
+        <div class="case-tile__media">
+          <img src="/smart-epsilon-redesign/V2/dist/assets/case-lube-BrmiZn4A.webp" alt="Automotive lubricant maintenance and oil distribution" width="600" height="400" loading="lazy" />
+        </div>
+        <div class="case-tile__body">
+          <p class="case-tile__tag">Lubricants</p>
+          <h3>National oil &amp; lubricants major</h3>
+          <p>Full parent-child aggregation across depots and dealers nationwide.</p>
+        </div>
+      </article>
+      <article class="case-tile">
+        <div class="case-tile__media">
+          <img src="/smart-epsilon-redesign/V2/dist/assets/case-industrial-Bo-labwH.webp" alt="Industrial manufacturing plant floor with overhead crane" width="600" height="400" loading="lazy" />
+        </div>
+        <div class="case-tile__body">
+          <p class="case-tile__tag">Industrial</p>
+          <h3>World's largest rotary-tiller maker</h3>
+          <p>End-to-end WMS transformation across multiple manufacturing plants.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="stage stage--cta" id="cta">
+    <div class="cta-shell">
+      <header class="cta-intro" data-reveal>
+        <p class="eyebrow">Book a demo</p>
+        <h2 class="cta-intro__title">
+          Ready to see<br />your chain <span class="t-accent">live?</span>
+        </h2>
+        <p class="cta-intro__lede">A walkthrough configured for your industry — no slides, no generic pitch.</p>
+      </header>
+
+      <div class="cta-board" data-reveal>
+        <div class="cta-form-panel">
+          <p class="cta-form-panel__label">Request a session</p>
+          <form data-demo-form class="cta-form" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="firstName">First name</label>
+                <input id="firstName" name="firstName" autocomplete="given-name" required />
+                <span class="field-error"></span>
+              </div>
+              <div class="field">
+                <label for="lastName">Last name</label>
+                <input id="lastName" name="lastName" autocomplete="family-name" required />
+                <span class="field-error"></span>
+              </div>
+              <div class="field field--full">
+                <label for="email">Work email</label>
+                <input id="email" type="email" name="email" autocomplete="email" inputmode="email" required />
+                <span class="field-error"></span>
+              </div>
+              <div class="field field--full">
+                <label for="comment">Your challenge</label>
+                <textarea id="comment" name="comment" rows="3" placeholder="Counterfeits, stockouts, channel loyalty…"></textarea>
+              </div>
+            </div>
+            <div class="cta-form__actions">
+              <span data-magnetic><button class="btn btn-primary cta-form__submit" type="submit">Book a demo <svg class="icon" width="16" height="16" aria-hidden="true"><use href="#icon-arrow-right"/></svg></button></span>
+              <p class="cta-form__note">We’ll reply within one business day.</p>
+            </div>
+          </form>
+          <div class="form-success" hidden>
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#icon-check"/></svg>
+            <div>
+              <p class="form-success__title">Request received</p>
+              <p class="form-success__text">Thanks — we’ll be in touch within one business day.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="cta-aside" aria-label="Contact details">
+          <div class="cta-aside__block">
+            <p class="cta-aside__label">Direct line</p>
+            <a class="cta-aside__mail" href="mailto:connect@smartepsilon.com">
+              <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#icon-mail"/></svg>
+              <span>connect@smartepsilon.com</span>
+            </a>
+          </div>
+          <div class="cta-aside__block">
+            <p class="cta-aside__label">What to expect</p>
+            <ul class="cta-aside__list">
+              <li>Industry-configured demo</li>
+              <li>Response in one business day</li>
+              <li>Live in ~6 weeks</li>
+            </ul>
+          </div>
+          <div class="cta-aside__block cta-aside__block--trust">
+            <p class="cta-aside__label">Trusted by</p>
+            <p class="cta-aside__trust">BASF · IFFCO · Corteva · HPCL</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/smart-epsilon-redesign/V2/dist/assets/logo-footer-D4xtKTsU.svg" alt="Smart Epsilon" width="170" height="47" />
+      <p>Unit-level supply chain traceability, anti-counterfeit and loyalty for manufacturers.</p>
+    </div>
+    <div class="footer-col"><h4>Products</h4><a href="#products">KAVACH</a><a href="#products">TrakNode</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="#philosophy">About Us</a><a href="#cases">Case Studies</a><a href="#cta">Contact</a></div>
+    <div class="footer-col footer-col--connect">
+      <h4>Connect</h4>
+      <div class="social-row" role="list" aria-label="Social links">
+        <a role="listitem" href="https://www.linkedin.com/company/smartepsilon" target="_blank" rel="noopener noreferrer" aria-label="Smart Epsilon on LinkedIn" title="LinkedIn">
+          <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#icon-linkedin"/></svg>
+        </a>
+        <a role="listitem" href="mailto:connect@smartepsilon.com" aria-label="Email connect@smartepsilon.com" title="Email">
+          <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#icon-mail"/></svg>
+        </a>
+        <a role="listitem" href="https://x.com/smartepsilon" target="_blank" rel="noopener noreferrer" aria-label="Smart Epsilon on X" title="X">
+          <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#icon-x"/></svg>
+        </a>
+        <a role="listitem" href="https://www.youtube.com/@smartepsilon" target="_blank" rel="noopener noreferrer" aria-label="Smart Epsilon on YouTube" title="YouTube">
+          <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#icon-youtube"/></svg>
+        </a>
+      </div>
+      <a class="footer-email" href="mailto:connect@smartepsilon.com">connect@smartepsilon.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Smart Epsilon, Inc. All rights reserved.</span></div>
+</footer>
+
+<div class="nav-drawer" id="nav-drawer" hidden>
+  <div class="nav-drawer-head">
+    <img src="/smart-epsilon-redesign/V2/dist/assets/logo-D0kBFmz2.svg" alt="Smart Epsilon" height="32" />
+    <button class="drawer-close nav-toggle" type="button" aria-label="Close menu"><svg class="icon" width="20" height="20"><use href="#icon-close"/></svg></button>
+  </div>
+  <nav class="nav-drawer-list" aria-label="Mobile">
+    <a href="#philosophy">About</a>
+    <a href="#problem">The Problem</a>
+    <details class="nav-drawer-mega">
+      <summary>Products</summary>
+      <div class="nav-drawer-sub">
+        <a href="#products" data-product-select="0">KAVACH — Anti-counterfeit</a>
+        <a href="#products" data-product-select="1">TrakNode — Live tracking</a>
+        <a href="#products" data-product-select="2">Loyalty — Channel rewards</a>
+        <a href="#products" data-product-select="3">AI Video — CCTV intelligence</a>
+        <a href="#products">All products</a>
+      </div>
+    </details>
+    <a href="#clients">Clients</a>
+    <a href="#cases">Cases</a>
+    <a href="#why">Why Smart Epsilon</a>
+    <a href="#cta">Contact</a>
+  </nav>
+  <div class="nav-drawer-cta"><a class="btn btn-primary" href="#cta">Schedule a Demo</a></div>
+</div>
+
+</body>
+</html>

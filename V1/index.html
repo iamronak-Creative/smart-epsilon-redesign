@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Epsilon | Absolute Traceability</title>
+  <script type="module" crossorigin src="./assets/index-Bk50ZF3i.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-teTuYIi2.css">
+</head>
+<body>
+  <!-- CSS Grid Background (Professional Tech Vibe) -->
+  <div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background-color: var(--color-bg); background-image: radial-gradient(rgba(88, 80, 236, 0.1) 1px, transparent 1px); background-size: 40px 40px;">
+    <!-- Brand subtle glow -->
+    <div style="position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 80vw; height: 80vh; background: radial-gradient(ellipse, rgba(13, 148, 136, 0.15), transparent 70%); border-radius: 50%;"></div>
+    
+    <!-- Three.js Interactive Particle Map -->
+    <canvas id="webgl-container"></canvas>
+  </div>
+
+  <main style="position: relative; width: 100%; overflow: clip;">
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Minimal Nav Trigger -->
+  <nav style="position: fixed; top: 0; left: 0; width: 100%; padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; z-index: 100; mix-blend-mode: difference;">
+    <img src="./assets/logo-BKZez9j3.svg" alt="Smart Epsilon" style="height: 42px; filter: brightness(0) invert(1);">
+    <div style="display: flex; align-items: center; gap: 2rem;">
+      <a href="#contact" data-cursor-hover style="color: #fff; font-family: var(--font-mono); font-size: 0.9rem; text-decoration: none; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.25); padding: 0.5rem 1.25rem; border-radius: 99px; transition: all 0.3s; mix-blend-mode: normal;" onmouseover="this.style.borderColor='var(--color-accent)'; this.style.color='var(--color-accent)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.25)'; this.style.color='#fff';">Contact Us</a>
+      <button class="nav-trigger" data-cursor-hover style="position: static; mix-blend-mode: normal; margin: 0;">Menu [=]</button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="section-full" id="hero" style="min-height: 100vh; padding-top: 100px;">
+    <div class="hero-wrapper" style="position: relative; max-width: 1400px; margin: 0 auto; width: 100%;">
+      
+      <!-- Typography -->
+      <h1 class="massive-text font-display" style="font-size: clamp(3.5rem, 10vw, 12rem); color: #fff;">
+        ABSOLUTE<br>
+        <span style="color: var(--color-accent);">TRACEABILITY.</span>
+      </h1>
+      
+      <div style="margin-top: 2rem; max-width: 550px; font-size: 1.25rem; line-height: 1.6; color: rgba(255,255,255,0.7);">
+        Stop guessing. Know exactly where your product is, who is faking it, and how to stop them. A unified serialization and brand protection engine built for enterprise scale.
+      </div>      <!-- Floating Glass Cards (Scattered) -->
+      <div class="hero-float-wrapper" style="position: absolute; top: 5%; right: 5%; width: 195px; z-index: 10;">
+        <div class="glass-card hero-glass-card font-mono" style="width: 100%; margin: 0; padding: 1.25rem !important;" data-cursor-hover>
+          <div style="color: var(--color-accent); font-size: 0.65rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;">
+            <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); display: inline-block;"></span>
+            SYS_STATUS
+          </div>
+          <div style="font-size: 0.85rem; font-weight: bold; color: #fff; letter-spacing: 0.02em;">ACTIVE_SCANNING</div>
+          <div style="font-size: 0.65rem; color: rgba(255,255,255,0.5); margin-top: 0.5rem;">Nodes: 42,019 online</div>
+        </div>
+      </div>
+ 
+      <div class="hero-float-wrapper" style="position: absolute; bottom: 25%; right: 10%; width: 240px; z-index: 10;">
+        <div class="glass-card hero-glass-card font-mono" style="width: 100%; margin: 0; border-color: rgba(245, 158, 11, 0.3); padding: 1.25rem !important;" data-cursor-hover>
+          <div style="color: var(--color-yellow); font-size: 0.65rem; margin-bottom: 0.5rem;">THREAT_DETECTION</div>
+          <div style="font-size: 0.85rem; font-weight: bold; color: #fff; letter-spacing: 0.02em;">COUNTERFEIT BLOCKED</div>
+          <div style="font-size: 0.65rem; color: rgba(255,255,255,0.5); margin-top: 0.5rem;">Location: Region 7 (Geofenced)</div>
+        </div>
+      </div>
+
+      <!-- Hero Stats Bottom -->
+      <div class="hero-stats" style="margin-top: 6rem; position: relative; width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+        <div class="stat-block">
+          <span class="stat-value" style="color: #fff;" data-val="320" data-suffix="M+">320M+</span>
+          <span class="stat-label">Units Serialized</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value" style="color: #fff;" data-val="42" data-suffix="K+">42K+</span>
+          <span class="stat-label">Connected Nodes</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value" style="color: #fff;" data-val="99" data-suffix=".2%">99.2%</span>
+          <span class="stat-label">Verification Rate</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value" style="color: #fff;" data-val="350" data-prefix="$" data-suffix="M">$350M</span>
+          <span class="stat-label">Revenue Protected</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value" style="color: #fff;" data-val="15" data-suffix="+">15+</span>
+          <span class="stat-label">Active Countries</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HORIZONTAL SCROLL SECTION: THE PROBLEM -->
+  <div id="horizontal-scroll-trigger" style="background: transparent; position: relative; z-index: 2;">
+    <div class="horizontal-scroll-wrapper" id="horizontal-wrapper" style="background: transparent;">
+      
+      <!-- Panel 1 -->
+      <section class="horizontal-panel scroll-reveal">
+        <div class="font-mono" style="color: var(--color-accent); margin-bottom: 1.5rem;">[ SYSTEM VULNERABILITIES // 02 ]</div>
+        <h2 class="panel-title font-display">
+          THE SUPPLY CHAIN <span style="color: var(--color-accent);">BREAKS</span> IN 3 WAYS.
+        </h2>
+        <div class="panel-desc font-mono">
+          Most manufacturers pay for all three. We fix them.
+        </div>
+      </section>
+
+      <!-- Panel 2 -->
+      <section class="horizontal-panel scroll-reveal">
+        <svg style="width: 48px; height: 48px; color: var(--color-accent); margin-bottom: 2rem; opacity: 0.8;" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" />
+        </svg>
+        <div class="font-mono" style="color: var(--color-accent); margin-bottom: 1rem;">ERR_01 // BLIND SPOTS</div>
+        <h2 class="panel-title font-display">
+          INVISIBILITY BEYOND THE FACTORY GATE.
+        </h2>
+        <div class="panel-desc">
+          Once goods leave your plant, visibility drops. You make decisions on stale data while distributors control the narrative.
+        </div>
+      </section>
+
+      <!-- Panel 3 -->
+      <section class="horizontal-panel scroll-reveal">
+        <svg style="width: 48px; height: 48px; color: var(--color-accent); margin-bottom: 2rem; opacity: 0.8;" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        <div class="font-mono" style="color: var(--color-accent); margin-bottom: 1rem;">ERR_02 // REVENUE LEAK</div>
+        <h2 class="panel-title font-display">
+          COUNTERFEITS QUIETLY DRAIN MARGIN.
+        </h2>
+        <div class="panel-desc">
+          Fake products damage brand credibility and bleed revenue long before you detect the leakage.
+        </div>
+      </section>
+
+      <!-- Panel 4 -->
+      <section class="horizontal-panel scroll-reveal">
+        <svg style="width: 48px; height: 48px; color: var(--color-accent); margin-bottom: 2rem; opacity: 0.8;" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 21V12.75m0 0l-4.5 4.5m4.5-4.5l4.5 4.5M3 10.5h18M5 10.5V21h14V10.5m-16 0L12 3l8 7.5" />
+        </svg>
+        <div class="font-mono" style="color: var(--color-accent); margin-bottom: 1rem;">ERR_03 // CHANNEL APATHY</div>
+        <h2 class="panel-title font-display">
+          RETAILERS HAVE NO REASON TO PUSH YOU.
+        </h2>
+        <div class="panel-desc">
+          Your team visits once a month, but a competitor's program runs daily. Without active loyalty engagement, they push whatever brand paid them last.
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- PLATFORM SUITE (BENTO GRID REDESIGN) -->
+  <section id="platform-stack" style="background-color: transparent; display: block; padding: 120px 4rem; position: relative;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <span class="font-mono" style="color: var(--color-accent); font-size: 0.9rem; letter-spacing: 0.2em;">[ PRODUCT SUITE // 03 ]</span>
+    </div>
+    <h2 class="font-display" style="font-size: clamp(3rem, 5vw, 6rem); margin-bottom: 5rem; text-align: center; color: #fff; line-height: 1.1;">
+      ONE PLATFORM. <br>
+      <span style="color: var(--color-accent);">ZERO BLIND SPOTS.</span>
+    </h2>
+    
+    <div class="product-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; max-width: 1400px; margin: 0 auto; width: 100%;">
+      
+      <!-- Card 1 -->
+      <div class="glass-card scroll-reveal" id="card-1" style="background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 3rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.6); transition: all 0.3s;" onmouseover="this.style.borderColor='var(--color-accent)'; this.style.transform='translateY(-8px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <span class="font-mono" style="color: var(--color-accent); font-size: 0.85rem;">[ MODULE // 01 ]</span>
+            <span class="font-mono" style="color: rgba(255,255,255,0.3); font-size: 0.75rem;">TRACK_TRACE_V4</span>
+          </div>
+          <h3 class="font-display" style="font-size: 1.75rem; margin-bottom: 1.5rem; color: #fff; line-height: 1.2;">SERIALIZATION ENGINE</h3>
+          <p style="font-size: 1.05rem; color: rgba(255,255,255,0.6); line-height: 1.6;">
+            Generate unique QR codes on the plant line. Map parent cases to child items (cartons to pallets) to track unit movement from depots to regional distributors, completely offline.
+          </p>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem;">
+          <div>
+            <div class="font-mono" style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">FEATURES</div>
+            <div style="color: #fff; font-size: 0.9rem; font-weight: bold;">Parent-Child Mapping // Aggregation</div>
+          </div>
+          <div>
+            <div class="font-mono" style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">DEPLOYMENT</div>
+            <div style="color: #fff; font-size: 0.9rem; font-weight: bold;">On-Prem & Cloud Edge</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="glass-card scroll-reveal" id="card-2" style="background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 3rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.6); transition: all 0.3s;" onmouseover="this.style.borderColor='var(--color-accent)'; this.style.transform='translateY(-8px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <span class="font-mono" style="color: var(--color-accent); font-size: 0.85rem;">[ MODULE // 02 ]</span>
+            <span class="font-mono" style="color: rgba(255,255,255,0.3); font-size: 0.75rem;">KAVACH_SECURE</span>
+          </div>
+          <h3 class="font-display" style="font-size: 1.75rem; margin-bottom: 1.5rem; color: #fff; line-height: 1.2;">BRAND PROTECTION</h3>
+          <p style="font-size: 1.05rem; color: rgba(255,255,255,0.6); line-height: 1.6;">
+            Secure high-margin inventory with overt holograms, covert clone warnings, and forensic watermarks validated in seconds via field scanner apps.
+          </p>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem;">
+          <div>
+            <div class="font-mono" style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">SECURITY LAYERS</div>
+            <div style="color: #fff; font-size: 0.9rem; font-weight: bold;">Overt, Covert & Forensic AI</div>
+          </div>
+          <div>
+            <div class="font-mono" style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">VALIDATION</div>
+            <div style="color: #fff; font-size: 0.9rem; font-weight: bold;">Offline Cryptographic Decryption</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="glass-card scroll-reveal" id="card-3" style="background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 3rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.6); transition: all 0.3s;" onmouseover="this.style.borderColor='var(--color-accent)'; this.style.transform='translateY(-8px)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <span class="font-mono" style="color: var(--color-accent); font-size: 0.85rem;">[ MODULE // 03 ]</span>
+            <span class="font-mono" style="color: rgba(255,255,255,0.3); font-size: 0.75rem;">LOYALTY_LEDGER</span>
+          </div>
+          <h3 class="font-display" style="font-size: 1.75rem; margin-bottom: 1.5rem; color: #fff; line-height: 1.2;">CHANNEL REWARDS</h3>
+          <p style="font-size: 1.05rem; color: rgba(255,255,255,0.6); line-height: 1.6;">
+            Auto-credit loyalty points and payouts directly to mechanic, retailer, or distributor digital wallets on scan verification. Incentivize authentic scans instantly.
+          </p>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem;">
+          <div>
+            <div class="font-mono" style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">REWARDS</div>
+            <div style="color: #fff; font-size: 0.9rem; font-weight: bold;">Instant Digital Wallet Credit</div>
+          </div>
+          <div>
+            <div class="font-mono" style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">INTEGRATION</div>
+            <div style="color: #fff; font-size: 0.9rem; font-weight: bold;">UPI, Bank Transfer & Points</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT LOGO MARQUEE (TRUSTED BY INDUSTRY LEADERS) -->
+  <section aria-label="Trusted by Industry Leaders" style="padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); overflow: hidden; width: 100%; margin: 4rem 0 2rem 0;">
+    <div style="text-align: center; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 2rem;">
+      Trusted by Industry Leaders in 15+ Countries
+    </div>
+    <div class="marquee-container" style="overflow: hidden; white-space: nowrap; position: relative; width: 100%; mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);">
+      <div class="marquee-content" style="display: inline-block; animation: marquee 28s linear infinite;">
+        <!-- Logo List Set 1 -->
+        <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0 3.5rem; color: #ffffff;">
+          <svg style="height: 24px; width: 24px; color: #ffffff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="2" y="2" width="14" height="14" rx="1" />
+            <rect x="8" y="8" width="14" height="14" rx="1" fill="currentColor" />
+          </svg>
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.05em; color: #ffffff;">BASF</span>
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0 3.5rem; color: #ffffff;">
+          <svg style="height: 24px; width: 24px; color: #ffffff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18m-9-9C9.5 6.5 8 9 8 12s1.5 5.5 4 9c2.5-3.5 4-6 4-9s-1.5-5.5-4-9z" />
+          </svg>
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.05em; color: #ffffff;">IFFCO</span>
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0 3.5rem; color: #ffffff;">
+          <svg style="height: 24px; width: 24px; color: #ffffff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-1.2 3-3 5-6 6 3 1.2 5 3 6 6 1.2-3 3-5 6-6-3-1.2-5-3-6-6z" fill="currentColor" fill-opacity="0.3" />
+          </svg>
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.05em; color: #ffffff;">CORTEVA</span>
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0 3.5rem; color: #ffffff;">
+          <svg style="height: 24px; width: 24px; color: #ffffff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="10" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5" />
+          </svg>
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.05em; color: #ffffff;">HPCL</span>
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0 3.5rem; color: #ffffff;">
+          <svg style="height: 24px; width: 24px; color: #ffffff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="12,4 20,20 4,20" fill="currentColor" fill-opacity="0.3" />
+          </svg>
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.05em; color: #ffffff;">INDOFIL</span>
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0 3.5rem; color: #ffffff;">
+          <svg style="height: 24px; width: 24px; color: #ffffff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918" />
+          </svg>
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.05em; color: #ffffff;">adani</span>
+        </div>
+
+        <!-- Logo List Set 2 (for seamless loop) -->
+        <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0 3.5rem; color: #ffffff;">
+          <svg style="height: 24px; width: 24px; color: #ffffff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="2" y="2" width="14" height="14" rx="1" />
+            <rect x="8" y="8" width="14" height="14" rx="1" fill="currentColor" />
+          </svg>
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.05em; color: #ffffff;">BASF</span>
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0 3.5rem; color: #ffffff;">
+          <svg style="height: 24px; width: 24px; color: #ffffff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18m-9-9C9.5 6.5 8 9 8 12s1.5 5.5 4 9c2.5-3.5 4-6 4-9s-1.5-5.5-4-9z" />
+          </svg>
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.05em; color: #ffffff;">IFFCO</span>
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0 3.5rem; color: #ffffff;">
+          <svg style="height: 24px; width: 24px; color: #ffffff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-1.2 3-3 5-6 6 3 1.2 5 3 6 6 1.2-3 3-5 6-6-3-1.2-5-3-6-6z" fill="currentColor" fill-opacity="0.3" />
+          </svg>
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.05em; color: #ffffff;">CORTEVA</span>
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0 3.5rem; color: #ffffff;">
+          <svg style="height: 24px; width: 24px; color: #ffffff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="10" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5" />
+          </svg>
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.05em; color: #ffffff;">HPCL</span>
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0 3.5rem; color: #ffffff;">
+          <svg style="height: 24px; width: 24px; color: #ffffff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="12,4 20,20 4,20" fill="currentColor" fill-opacity="0.3" />
+          </svg>
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.05em; color: #ffffff;">INDOFIL</span>
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0 3.5rem; color: #ffffff;">
+          <svg style="height: 24px; width: 24px; color: #ffffff;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918" />
+          </svg>
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; letter-spacing: 0.05em; color: #ffffff;">adani</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KAVACH SECTION: The X-Ray Scanner (SIDE BY SIDE DESIGN) -->
+  <!-- KAVACH SECTION: The X-Ray Scanner (SIDE BY SIDE DESIGN) -->
+  <section class="section-full" id="xray-scanner" style="position: relative; background: transparent; overflow: hidden; padding: 120px 4rem; display: flex; align-items: center; justify-content: center;">
+    <div style="max-width: 1400px; margin: 0 auto; width: 100%;">
+      
+      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 6rem; align-items: center; width: 100%;">
+        <!-- Left Content -->
+        <div class="scroll-reveal" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+          <span class="font-mono" style="color: var(--color-accent); font-size: 0.9rem; letter-spacing: 0.2em; display: block; margin-bottom: 1.5rem;">[ SECURITY SHIELD // 04 ]</span>
+          <h2 class="font-display" style="font-size: clamp(2.5rem, 4vw, 4rem); line-height: 1.1; color: #fff; margin-bottom: 2rem;">KAVACH // <br><span style="color: var(--color-accent);">X-RAY INSPECTION</span></h2>
+          <p style="font-size: 1.25rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 2rem;">
+            Verify product packaging integrity in real-time. Hover your cursor over the product container on the right to scan forensic security markers, simulating active hardware lens verification.
+          </p>
+
+          <!-- 3 Slim Feature Cards Stacked Inline -->
+          <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
+            <!-- Card 1: OVERT -->
+            <div class="content-card" style="padding: 0.85rem 1.25rem; border-radius: 12px; background: rgba(30, 41, 59, 0.2); border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 1.25rem;">
+              <div style="background: rgba(13, 148, 136, 0.1); padding: 0.5rem; border-radius: 6px; flex-shrink: 0;">
+                <svg style="width: 18px; height: 18px; color: var(--color-accent); display: block;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: bold; color: var(--color-accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.15rem;">OVERT</div>
+                <div style="font-family: var(--font-body); font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.45;">
+                  Micro-text holographic shield visible directly on product labels.
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: COVERT -->
+            <div class="content-card" style="padding: 0.85rem 1.25rem; border-radius: 12px; background: rgba(30, 41, 59, 0.2); border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 1.25rem;">
+              <div style="background: rgba(13, 148, 136, 0.1); padding: 0.5rem; border-radius: 6px; flex-shrink: 0;">
+                <svg style="width: 18px; height: 18px; color: var(--color-accent); display: block;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: bold; color: var(--color-accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.15rem;">COVERT</div>
+                <div style="font-family: var(--font-body); font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.45;">
+                  Offline mathematical token verification without requiring network connectivity.
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: FORENSIC -->
+            <div class="content-card" style="padding: 0.85rem 1.25rem; border-radius: 12px; background: rgba(30, 41, 59, 0.2); border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 1.25rem;">
+              <div style="background: rgba(13, 148, 136, 0.1); padding: 0.5rem; border-radius: 6px; flex-shrink: 0;">
+                <svg style="width: 18px; height: 18px; color: var(--color-accent); display: block;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m2-3H8" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: bold; color: var(--color-accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.15rem;">FORENSIC</div>
+                <div style="font-family: var(--font-body); font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.45;">
+                  Machine-readable cryptographic laser prints readable under active device lens.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Mockup Container -->
+        <div class="scroll-reveal" style="display: flex; justify-content: center; position: relative;">
+          <!-- Hover target element container -->
+          <div id="xray-trigger" style="position: relative; width: 100%; max-width: 440px; height: 580px; display: flex; align-items: center; justify-content: center; cursor: crosshair;">
+            <!-- Base Package (Real generated product package image) -->
+            <img class="package-base" src="./assets/professional_package-BdsPvqLq.jpg" alt="Serialized Product Package" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.6); z-index: 1;">
+
+            <!-- Hidden Forensic Layer (Revealed by mask) -->
+            <div class="package-reveal" id="xray-mask" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; z-index: 2; pointer-events: none; opacity: 0; mask-image: radial-gradient(circle at 50% 50%, black 0%, transparent 150px); -webkit-mask-image: radial-gradient(circle at 50% 50%, black 0%, transparent 150px); background: #0D1117;">
+              <!-- Outline edge blueprint rendering -->
+              <img src="./assets/professional_package-BdsPvqLq.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; filter: grayscale(1) invert(1) contrast(3) brightness(0.95) saturate(2); opacity: 0.95;">
+            </div>
+            
+            <!-- Interactive target overlay (Fades in over mask without being cut off) -->
+            <div id="xray-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(13, 148, 136, 0.02); border: 2px dashed var(--color-accent); border-radius: 20px; z-index: 3; pointer-events: none; opacity: 0; transition: opacity 0.3s ease;">
+              <div class="font-mono" style="color: var(--color-accent); font-size: 1.15rem; font-weight: bold; text-shadow: 0 0 10px var(--color-accent); background: rgba(13,17,23,0.85); padding: 0.5rem 1rem; border-radius: 4px; border: 1px solid var(--color-accent);">[ DETECTED: FORENSIC MARKER ]</div>
+              <div class="font-mono" style="color: #fff; font-size: 0.8rem; margin-top: 1rem; background: rgba(13,17,23,0.85); padding: 0.25rem 0.5rem; border-radius: 4px;">SYS_HASH: 0x89F2A1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TRACK & TRACE // TECHNICAL SCHEMATIC DESIGN -->
+  <section id="track-trace-timeline" style="padding: 120px 4rem; background: transparent; position: relative;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div class="scroll-reveal" style="margin-bottom: 6rem;">
+        <span class="font-mono" style="color: var(--color-accent); font-size: 0.9rem; letter-spacing: 0.2em;">[ CORE ENGINE // 05 ]</span>
+        <h2 class="font-display" style="font-size: clamp(2.5rem, 6vw, 5rem); margin-top: 1rem; color: #fff; line-height: 1.1;">
+          SERIALIZATION<br><span style="color: var(--color-accent);">FLOW METRICS.</span>
+        </h2>
+      </div>
+
+      <!-- Vertical Production Line Schematic -->
+      <div style="display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 6rem; position: relative; align-items: stretch;">
+               <!-- Left Sticky Diagnostics Panel Container -->
+        <div style="align-self: stretch; min-height: 100%;">
+          <div style="position: sticky; top: 160px;">
+            <div class="content-card" style="padding: 2rem 2.5rem; height: 430px; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-accent); letter-spacing: 0.1em; margin-bottom: 1.5rem;">[ SYSTEM_DIAGNOSTICS // LEDGER ]</div>
+                
+                <div style="display: flex; flex-direction: column; gap: 1.1rem; position: relative;">
+                  <!-- Vertical timeline connector track -->
+                  <div style="position: absolute; left: 18px; top: 18px; bottom: 18px; width: 1.5px; background: rgba(255,255,255,0.06); z-index: 1;"></div>
+                  
+                  <!-- Status Node 1 -->
+                  <div id="timeline-node-1" style="display: flex; align-items: center; gap: 1.25rem; transition: all 0.3s; opacity: 0.5; position: relative; z-index: 2;">
+                    <div style="width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.4); background: #0b0f19; z-index: 2;" class="node-num">
+                      <!-- Barcode / QR icon -->
+                      <svg style="width: 15px; height: 15px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5zM15 15h.008v.008H15V15zm0 2.25h.008v.008H15v-.008zM17.25 15h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm-2.25 2.25h.008v.008H15v-.008zm2.25 0h.008v.008h-.008v-.008zm2.25-4.5h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008v-.008z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: bold; color: rgba(255,255,255,0.4);" class="node-label">SYS_ENCODING</div>
+                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.3); font-family: var(--font-mono);" class="node-status">STATUS: PENDING</div>
+                    </div>
+                  </div>
+
+                  <!-- Status Node 2 -->
+                  <div id="timeline-node-2" style="display: flex; align-items: center; gap: 1.25rem; transition: all 0.3s; opacity: 0.5; position: relative; z-index: 2;">
+                    <div style="width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.4); background: #0b0f19; z-index: 2;" class="node-num">
+                      <!-- Aggregation box layers icon -->
+                      <svg style="width: 15px; height: 15px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.878m13.5-3A2.25 2.25 0 0119.5 9v.878m0 0a2.246 2.246 0 00-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0121 12v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6c0-.98.626-1.813 1.5-2.122" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: bold; color: rgba(255,255,255,0.4);" class="node-label">AGGREGATION</div>
+                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.3); font-family: var(--font-mono);" class="node-status">STATUS: PENDING</div>
+                    </div>
+                  </div>
+
+                  <!-- Status Node 3 -->
+                  <div id="timeline-node-3" style="display: flex; align-items: center; gap: 1.25rem; transition: all 0.3s; opacity: 0.5; position: relative; z-index: 2;">
+                    <div style="width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.4); background: #0b0f19; z-index: 2;" class="node-num">
+                      <!-- Distribution delivery truck icon -->
+                      <svg style="width: 15px; height: 15px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.129-1.125v-3.02M14.25 18.75v-9m-9 9v-9m9 9H5.25m9 0h3.75m0 0h-.008v-.008h.008v.008zm-2.25-9a2.25 2.25 0 00-2.25-2.25h-3a2.25 2.25 0 00-2.25 2.25m9 0V14.25m-9 0V14.25m9 0H5.25M12 3v13.5" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: bold; color: rgba(255,255,255,0.4);" class="node-label">DISTRIBUTION</div>
+                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.3); font-family: var(--font-mono);" class="node-status">STATUS: PENDING</div>
+                    </div>
+                  </div>
+
+                  <!-- Status Node 4 -->
+                  <div id="timeline-node-4" style="display: flex; align-items: center; gap: 1.25rem; transition: all 0.3s; opacity: 0.5; margin-bottom: 1.5rem; position: relative; z-index: 2;">
+                    <div style="width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.4); background: #0b0f19; z-index: 2;" class="node-num">
+                      <!-- Checked seal / audit icon -->
+                      <svg style="width: 15px; height: 15px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: bold; color: rgba(255,255,255,0.4);" class="node-label">SHELF_AUDIT</div>
+                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.3); font-family: var(--font-mono);" class="node-status">STATUS: PENDING</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Real-time code log display -->
+              <div style="background: rgba(0,0,0,0.4); padding: 0.85rem 1.25rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); font-family: monospace; font-size: 0.72rem; color: var(--color-accent); height: 92px; overflow: hidden; line-height: 1.45;" id="ledger-console">
+                &gt; INITIALIZING SERIALIZATION LEDGER...<br>
+                &gt; SCROLL TO TRACE ENGINE INSTANCE...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Stacked Flow Cards -->
+        <div style="display: flex; flex-direction: column; gap: 3rem;">
+          <!-- Step 1 Card -->
+          <div class="content-card timeline-card" id="t-card-1" style="padding: 1.5rem 2rem; height: 250px; display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-accent);">[ ENGINE_STEP_01 ]</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: rgba(255,255,255,0.3);">SPEED: 400 CTN/MIN</span>
+              </div>
+              <h3 class="font-display" style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;">PLANT ENCODING</h3>
+              <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.5;">
+                Laser-etching high-density 2D barcodes onto packaging at speeds of 400 cartons/minute.
+              </p>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.75rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.75rem;">
+              <span style="color: rgba(255,255,255,0.4);">LEDGER SIGNATURE:</span>
+              <span style="color: #fff; font-weight: bold;">SYS_ENCODED_0x89F2</span>
+            </div>
+          </div>
+
+          <!-- Step 2 Card -->
+          <div class="content-card timeline-card" id="t-card-2" style="padding: 1.5rem 2rem; height: 250px; display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent);">[ ENGINE_STEP_02 ]</span>
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: rgba(255,255,255,0.3);">STRUCTURE: PARENT_CHILD</span>
+              </div>
+              <h3 class="font-display" style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;">DEPOT BUNDLING</h3>
+              <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.5;">
+                Logical aggregation maps unit packs to shipper cases, case-to-pallet aggregation.
+              </p>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.75rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.75rem;">
+              <span style="color: rgba(255,255,255,0.4);">LEDGER SIGNATURE:</span>
+              <span style="color: #fff; font-weight: bold;">AGGREGATED_PARENT_0x3B2C</span>
+            </div>
+          </div>
+
+          <!-- Step 3 Card -->
+          <div class="content-card timeline-card" id="t-card-3" style="padding: 1.5rem 2rem; height: 250px; display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent);">[ ENGINE_STEP_03 ]</span>
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: rgba(255,255,255,0.3);">TRANSIT: OFF-GRID</span>
+              </div>
+              <h3 class="font-display" style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;">DISTRIBUTION</h3>
+              <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.5;">
+                Verifying custody transfer at depots to geofence regional distribution boundaries.
+              </p>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.75rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.75rem;">
+              <span style="color: rgba(255,255,255,0.4);">LEDGER SIGNATURE:</span>
+              <span style="color: #fff; font-weight: bold;">CUSTODY_TRANSFER_0x9A4F</span>
+            </div>
+          </div>
+
+          <!-- Step 4 Card -->
+          <div class="content-card timeline-card" id="t-card-4" style="padding: 1.5rem 2rem; height: 250px; display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent);">[ ENGINE_STEP_04 ]</span>
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: rgba(255,255,255,0.3);">VERIFICATION: INSTANT</span>
+              </div>
+              <h3 class="font-display" style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;">SHELF AUDIT</h3>
+              <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.5;">
+                Retail point of verification via edge scanners to validate authentic inventory before sale.
+              </p>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.75rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.75rem;">
+              <span style="color: rgba(255,255,255,0.4);">LEDGER SIGNATURE:</span>
+              <span style="color: #fff; font-weight: bold;">VERIFIED_0x7C5D</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOYALTY MANAGEMENT: PASSBOOK -->
+  <section class="section-full" id="loyalty-passbook" style="padding: 120px 4rem; background: transparent; overflow: hidden;">
+    <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr .8fr; gap: 6rem; align-items: center;">
+      
+      <div class="scroll-reveal">
+        <span class="font-mono" style="color: var(--color-accent); font-size: 0.9rem; letter-spacing: 0.2em; display: block; margin-bottom: 1.5rem;">[ CHANNEL REWARDS // 06 ]</span>
+        <h2 class="font-display" style="font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; color: #fff;">INSTANT VERIFICATION.<br><span style="color: var(--color-accent);">INSTANT REWARDS.</span></h2>
+        <p style="font-size: 1.25rem; color: rgba(255,255,255,0.7); margin-top: 2rem; line-height: 1.7;">
+          Mechanics and retailers scan packaging on delivery. Our edge parser cryptographically validates authenticity and instantly credits payouts to digital wallets—incentivizing compliance and eliminating counterfeit infiltration.
+        </p>
+      </div>
+
+      <!-- Mobile Wallet Mockup -->
+      <div class="scroll-reveal" style="display: flex; justify-content: center; position: relative;">
+        <div class="content-card" style="width: 448px; height: 530px; padding: 2rem; border-radius: 40px; border: 1.5px solid rgba(255,255,255,0.08); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 50px 100px -20px rgba(0,0,0,0.8);">
+          
+          <!-- Screen Top -->
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; color: rgba(255,255,255,0.5);" class="font-mono">
+              <span style="font-size: 0.8rem;">LEDGER_SYS</span>
+              <span style="font-size: 0.8rem;">100% SECURE</span>
+            </div>
+            
+            <!-- Wallet Card -->
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 1.25rem; position: relative; overflow: hidden; margin-bottom: 1.25rem;">
+              <div class="font-mono" style="color: rgba(255,255,255,0.4); font-size: 0.75rem;">CURRENT BALANCE</div>
+              <div style="font-size: 2rem; font-weight: bold; color: #fff; margin-top: 0.25rem;" class="font-display">$1,240.00</div>
+              <div class="font-mono" style="color: var(--color-accent); font-size: 0.7rem; margin-top: 0.75rem;">VERIFIED PAYOUTS: 142</div>
+            </div>
+            
+            <div class="font-mono" style="font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-bottom: 0.75rem;">LATEST TRANSACTIONS</div>
+            
+            <!-- Transaction List -->
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.65rem 0.75rem; background: rgba(255,255,255,0.03); border-radius: 8px;">
+                <div class="font-mono" style="font-size: 0.72rem; color: #fff;">Scan #9081 - Verified</div>
+                <div class="font-mono" style="font-size: 0.72rem; color: var(--color-accent);">+$10.00</div>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.65rem 0.75rem; background: rgba(255,255,255,0.03); border-radius: 8px;">
+                <div class="font-mono" style="font-size: 0.72rem; color: #fff;">Scan #9080 - Verified</div>
+                <div class="font-mono" style="font-size: 0.72rem; color: var(--color-accent);">+$15.00</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Button -->
+          <div style="background: var(--color-accent); color: #0D1117; border-radius: 12px; padding: 0.85rem; text-align: center; font-weight: bold; font-size: 0.9rem;" class="font-mono">
+            WITHDRAW FUNDS
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AI VIDEO INTELLIGENCE -->
+  <section class="section-full" id="ai-video" style="padding: 120px 4rem; background: transparent; overflow: hidden;">
+    <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+      
+      <!-- Video Live Feed Mockup -->
+      <div class="scroll-reveal" style="position: relative; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); aspect-ratio: 16/9; background: #000; box-shadow: 0 30px 60px rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center;">
+        <div style="position: absolute; top: 1rem; left: 1rem; background: rgba(255,0,0,0.8); color: #fff; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.8rem; z-index: 2;" class="font-mono">LIVE_FEED // DEPOT_04</div>
+        
+        <!-- Animated Bounding Boxes overlay -->
+        <div style="position: absolute; border: 2px solid var(--color-accent); width: 40%; height: 50%; top: 20%; left: 15%; display: flex; flex-direction: column; justify-content: space-between; padding: 0.5rem; z-index: 2;" class="font-mono">
+          <span style="color: var(--color-accent); font-size: 0.7rem; background: rgba(0,0,0,0.5);">BARCODE: VERIFIED</span>
+          <span style="color: var(--color-accent); font-size: 0.7rem; text-align: right;">MATCH: 99.8%</span>
+        </div>
+
+        <div style="position: absolute; border: 2px solid var(--color-yellow); width: 25%; height: 35%; bottom: 15%; right: 15%; display: flex; flex-direction: column; justify-content: space-between; padding: 0.5rem; z-index: 2;" class="font-mono">
+          <span style="color: var(--color-yellow); font-size: 0.7rem; background: rgba(0,0,0,0.5);">ALERT: DUPLICATE CODE</span>
+          <span style="color: var(--color-yellow); font-size: 0.7rem; text-align: right;">THREAT: HIGH</span>
+        </div>
+
+        <!-- CCTV Feed Image -->
+        <img src="./assets/cctv_logistics-DF5smzc9.jpg" alt="Automated Vision Logistics CCTV Feed" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.65; z-index: 0;">
+      </div>
+
+      <div class="scroll-reveal">
+        <span class="font-mono" style="color: var(--color-accent); font-size: 0.9rem; letter-spacing: 0.2em; display: block; margin-bottom: 1.5rem;">[ COMPUTER VISION // 07 ]</span>
+        <h2 class="font-display" style="font-size: clamp(2.2rem, 4.5vw, 3.8rem); line-height: 1.25; color: #fff;">
+          <span style="display: block; white-space: nowrap;">AUTOMATED VISION.</span>
+          <span style="color: var(--color-accent); display: block; white-space: nowrap;">ZERO LABOR LEAKAGE.</span>
+        </h2>
+        <p style="font-size: 1.25rem; color: rgba(255,255,255,0.7); margin-top: 2rem; line-height: 1.7;">
+          Overlay AI models directly on warehouse CCTV feeds. Detect processing bottle-necks, scan pallet label configurations automatically, and flag geofencing exceptions instantly without manual scanning overhead.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ERP COMPARISON TABLE -->
+  <section class="section-full" id="about" style="padding: 120px 4rem; background: transparent;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div class="scroll-reveal" style="text-align: center; margin-bottom: 2rem;">
+        <span class="font-mono" style="color: var(--color-accent); font-size: 0.9rem; letter-spacing: 0.2em;">[ PLATFORM COMPARISON // 08 ]</span>
+      </div>
+      <h2 class="font-display scroll-reveal" style="font-size: 3rem; margin-bottom: 4rem; text-align: center; color: #fff;">WHY SMART EPSILON?</h2>
+      
+      <table class="scroll-reveal" style="width: 100%; border-collapse: collapse; font-family: var(--font-mono); color: rgba(255,255,255,0.7); text-align: left;">
+        <thead>
+          <tr style="border-bottom: 2px solid rgba(255,255,255,0.1); color: #fff;">
+            <th style="padding: 2rem;">FEATURE</th>
+            <th style="padding: 2rem; color: var(--color-accent);">SMART EPSILON</th>
+            <th style="padding: 2rem;">TRADITIONAL ERP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);" class="table-row-hover">
+            <td style="padding: 2rem; color: #fff; font-weight: bold;">Granular Serialization</td>
+            <td style="padding: 2rem; color: var(--color-accent);">Unit-Level Tracking (Pack, Case, Pallet)</td>
+            <td style="padding: 2rem;">Batch/Lot-Level Only</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);" class="table-row-hover">
+            <td style="padding: 2rem; color: #fff; font-weight: bold;">Forensic Antifake</td>
+            <td style="padding: 2rem; color: var(--color-accent);">Covert QR, Laser Marks & AI Verification</td>
+            <td style="padding: 2rem;">Basic QR Labels (Easily Copied)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);" class="table-row-hover">
+            <td style="padding: 2rem; color: #fff; font-weight: bold;">Payout Engine</td>
+            <td style="padding: 2rem; color: var(--color-accent);">Instant UPI & Wallet Settlement on Scan</td>
+            <td style="padding: 2rem;">Manual Payout Settlement (Days/Weeks)</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </section>
+
+  <!-- KINETIC RESULTS -->
+  <section class="section-full" id="kinetic-results" style="background: transparent; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: 120px 0;">
+    <div class="kinetic-text" style="white-space: nowrap; font-size: clamp(6rem, 15vw, 20rem); font-family: var(--font-display); font-weight: 700; color: transparent; -webkit-text-stroke: 2px rgba(255,255,255,0.1); margin-bottom: -5rem;">99.2% AUTHENTIC</div>
+    <div class="kinetic-text" style="white-space: nowrap; font-size: clamp(6rem, 15vw, 20rem); font-family: var(--font-display); font-weight: 700; color: var(--color-accent); margin-bottom: -5rem; transform: translateX(-20%);">ZERO BLIND SPOTS</div>
+    <div class="kinetic-text" style="white-space: nowrap; font-size: clamp(6rem, 15vw, 20rem); font-family: var(--font-display); font-weight: 700; color: transparent; -webkit-text-stroke: 2px var(--color-accent); transform: translateX(10%);">100% COMPLIANT</div>
+  </section>
+
+  <!-- INDUSTRIES: SPLIT FOLDER DIRECTORY -->
+  <section id="industries" style="padding: 120px 4rem; background: transparent;">
+    <div class="industries-split" style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr .8fr; gap: 6rem; align-items: end;">
+      
+      <div>
+        <span class="font-mono" style="color: var(--color-accent); font-size: 0.9rem; letter-spacing: 0.2em;">[ EXPERTISE SECTORS // 09 ]</span>
+        <h2 class="font-display" style="font-size: clamp(2.5rem, 5vw, 4.5rem); margin-top: 1.5rem; color: #fff; line-height: 1.1; margin-bottom: 4rem;">
+          BUILT FOR<br><span style="color: var(--color-accent);">COMPLEXITY.</span>
+        </h2>
+        
+        <!-- Folder Directory Rows -->
+        <div style="display: flex; flex-direction: column;">
+          <div class="industry-row" style="border-top: 1px solid rgba(255,255,255,0.1); padding: 2.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+            <span class="font-display" style="font-size: 2rem; color: #fff;">01 // Agrochemicals & Seeds</span>
+            <span class="font-mono" style="color: var(--color-accent);">[ VIEW STATS ]</span>
+          </div>
+          <div class="industry-row" style="border-top: 1px solid rgba(255,255,255,0.1); padding: 2.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+            <span class="font-display" style="font-size: 2rem; color: #fff;">02 // Pharmaceuticals</span>
+            <span class="font-mono" style="color: var(--color-accent);">[ VIEW STATS ]</span>
+          </div>
+          <div class="industry-row" style="border-top: 1px solid rgba(255,255,255,0.1); padding: 2.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+            <span class="font-display" style="font-size: 2rem; color: #fff;">03 // Lubricants & Paints</span>
+            <span class="font-mono" style="color: var(--color-accent);">[ VIEW STATS ]</span>
+          </div>
+          <div class="industry-row" style="border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 2.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+            <span class="font-display" style="font-size: 2rem; color: #fff;">04 // FMCG & Retail</span>
+            <span class="font-mono" style="color: var(--color-accent);">[ VIEW STATS ]</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Telemetry Data Display Card -->
+      <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 3rem; box-shadow: 0 40px 80px rgba(0,0,0,0.5); overflow: hidden;">
+        <div class="font-mono" style="color: var(--color-accent); font-size: 0.8rem; margin-bottom: 2rem;">DIAGNOSTIC TELEMETRY // ACTIVE</div>
+        <div id="industry-content">
+          <!-- Sector Image Visual -->
+          <div style="width: 100%; height: 200px; border-radius: 10px; overflow: hidden; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.05);">
+            <img id="industry-visual" src="./assets/sector_agro-C1v6Uwt4.jpg" alt="Agrochemicals" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 class="font-display" style="font-size: 2.25rem; color: #fff; margin-bottom: 1.5rem;">Agrochemicals</h3>
+          <p class="font-mono" style="font-size: 1.05rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 2rem;">
+            Prevent seed dilution and protect grower yield margins. Track rural transshipments automatically and audit farmer payout validations.
+          </p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+            <div>
+              <div class="font-mono" style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">REVENUE PROTECTED</div>
+              <div class="font-display" style="font-size: 1.5rem; color: var(--color-accent); font-weight: bold; margin-top: 0.25rem;">$12.5M+</div>
+            </div>
+            <div>
+              <div class="font-mono" style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">COMPLIANCE RATING</div>
+              <div class="font-display" style="font-size: 1.5rem; color: #fff; font-weight: bold; margin-top: 0.25rem;">100% SECURE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROVEN AT SCALE: TESTIMONIALS -->
+  <section class="section-full" id="cases" style="padding: 120px 0; background-color: #0D1117; overflow: hidden; position: relative; z-index: 5;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 4rem; margin-bottom: 4rem;">
+      <div class="scroll-reveal">
+        <span class="font-mono" style="color: var(--color-accent); font-size: 0.9rem; letter-spacing: 0.2em; display: block; margin-bottom: 1.5rem;">[ CLIENT VALIDATION // 10 ]</span>
+        <h2 class="font-display" style="font-size: clamp(2.5rem, 5vw, 4.5rem); color: #fff;">PROVEN AT <span style="color: var(--color-accent);">SCALE.</span></h2>
+        <p class="font-mono" style="margin-top: 1rem; color: rgba(255,255,255,0.5);">Real outcomes from enterprise leaders.</p>
+      </div>
+    </div>
+
+    <!-- Edge fading mask wrapper -->
+    <div class="slider-fade-wrapper scroll-reveal" style="position: relative; width: 100%; overflow: hidden;">
+      
+      <!-- Gradient masks for left/right edges -->
+      <div style="position: absolute; top: 0; left: 0; bottom: 0; width: 25%; background: linear-gradient(to right, #0D1117 0%, transparent 100%); z-index: 10; pointer-events: none;"></div>
+      <div style="position: absolute; top: 0; right: 0; bottom: 0; width: 25%; background: linear-gradient(to left, #0D1117 0%, transparent 100%); z-index: 10; pointer-events: none;"></div>
+
+      <!-- Row 1: Left to Right -->
+      <div class="testimonial-slider-container" style="overflow: hidden; width: 100%; margin-bottom: 2rem;">
+        <div class="testimonial-track track-left-to-right" style="display: flex; gap: 2rem; width: max-content;">
+          <!-- Card 1 -->
+          <div class="testimonial-card" style="width: 380px; flex-shrink: 0; padding: 2.5rem; background: rgba(30, 41, 59, 0.2); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p style="font-size: 1.15rem; line-height: 1.6; color: #fff; text-transform: none;" class="font-display">
+              "Smart Epsilon digitized our entire seed supply chain in 4 months. Counterfeits dropped by 94% in the first season, restoring grower trust in our premium lines."
+            </p>
+            <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem;">
+              <div>
+                <div style="color: #fff; font-weight: bold; font-size: 0.85rem;" class="font-mono">Director of Logistics</div>
+                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4);" class="font-mono">Fortune 500 Agrochemical</div>
+              </div>
+              <div class="font-mono" style="color: var(--color-accent); font-weight: bold; font-size: 0.85rem;">94% DROP</div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="testimonial-card" style="width: 380px; flex-shrink: 0; padding: 2.5rem; background: rgba(30, 41, 59, 0.2); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p style="font-size: 1.15rem; line-height: 1.6; color: #fff; text-transform: none;" class="font-display">
+              "We were completely blind to our mechanic payout efficiency. The mechanics loyalty ledger bypassed distributors entirely, boosting authentic package scans by 85%."
+            </p>
+            <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem;">
+              <div>
+                <div style="color: #fff; font-weight: bold; font-size: 0.85rem;" class="font-mono">VP Brand Protection</div>
+                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4);" class="font-mono">Global Lubricant Brand</div>
+              </div>
+              <div class="font-mono" style="color: var(--color-accent); font-weight: bold; font-size: 0.85rem;">+85% SCANS</div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="testimonial-card" style="width: 380px; flex-shrink: 0; padding: 2.5rem; background: rgba(30, 41, 59, 0.2); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p style="font-size: 1.15rem; line-height: 1.6; color: #fff; text-transform: none;" class="font-display">
+              "Implementing the offline cryptographic QR validation secured our high-value crop shipments instantly. Direct scanning validation bypassed distribution opacity."
+            </p>
+            <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem;">
+              <div>
+                <div style="color: #fff; font-weight: bold; font-size: 0.85rem;" class="font-mono">Head of Brand Security</div>
+                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4);" class="font-mono">Leading Pesticide Enterprise</div>
+              </div>
+              <div class="font-mono" style="color: var(--color-accent); font-weight: bold; font-size: 0.85rem;">100% SECURE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Right to Left -->
+      <div class="testimonial-slider-container" style="overflow: hidden; width: 100%;">
+        <div class="testimonial-track track-right-to-left" style="display: flex; gap: 2rem; width: max-content;">
+          <!-- Card 4 -->
+          <div class="testimonial-card" style="width: 380px; flex-shrink: 0; padding: 2.5rem; background: rgba(30, 41, 59, 0.2); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p style="font-size: 1.15rem; line-height: 1.6; color: #fff; text-transform: none;" class="font-display">
+              "DSCSA compliance was a major headache for our distribution hubs. Smart Epsilon's aggregation mapping built the parent-child packaging relationships seamlessly."
+            </p>
+            <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem;">
+              <div>
+                <div style="color: #fff; font-weight: bold; font-size: 0.85rem;" class="font-mono">Operations Director</div>
+                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4);" class="font-mono">Multi-State Pharma Aggregator</div>
+              </div>
+              <div class="font-mono" style="color: var(--color-accent); font-weight: bold; font-size: 0.85rem;">DSCSA COMPLIANT</div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="testimonial-card" style="width: 380px; flex-shrink: 0; padding: 2.5rem; background: rgba(30, 41, 59, 0.2); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p style="font-size: 1.15rem; line-height: 1.6; color: #fff; text-transform: none;" class="font-display">
+              "We eliminated supply chain blind spots entirely. We now audit regional transfers and detect leaks in real-time, boosting distribution accuracy across channels."
+            </p>
+            <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem;">
+              <div>
+                <div style="color: #fff; font-weight: bold; font-size: 0.85rem;" class="font-mono">VP Distribution</div>
+                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4);" class="font-mono">Global Paint & Coating Brand</div>
+              </div>
+              <div class="font-mono" style="color: var(--color-accent); font-weight: bold; font-size: 0.85rem;">+92% EFFICIENCY</div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="testimonial-card" style="width: 380px; flex-shrink: 0; padding: 2.5rem; background: rgba(30, 41, 59, 0.2); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p style="font-size: 1.15rem; line-height: 1.6; color: #fff; text-transform: none;" class="font-display">
+              "Connecting with end retail merchants with direct scan rewards has changed our channel marketing. Authentic scan validations increased by 78% in weeks."
+            </p>
+            <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem;">
+              <div>
+                <div style="color: #fff; font-weight: bold; font-size: 0.85rem;" class="font-mono">Head of Marketing</div>
+                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4);" class="font-mono">FMCG Retail Group</div>
+              </div>
+              <div class="font-mono" style="color: var(--color-accent); font-weight: bold; font-size: 0.85rem;">+78% SCANS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA TERMINAL COMMAND BOX & PREMIUM FOOTER -->
+  <section id="contact" style="padding: 120px 4rem 60px 4rem; background: transparent; border-top: 1px solid rgba(255,255,255,0.05);">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      
+      <!-- High-Tech CTA terminal -->
+      <div class="scroll-reveal" style="background: linear-gradient(180deg, rgba(13, 17, 23, 0.85) 0%, rgba(5, 7, 10, 0.95) 100%), url('./assets/cta_background-DdXBU8pA.jpg') no-repeat center center; background-size: cover; border: 1px solid rgba(13, 148, 136, 0.3); border-radius: 16px; padding: 6rem; text-align: center; margin-bottom: 8rem; position: relative; overflow: hidden; box-shadow: 0 50px 100px -20px rgba(0,0,0,0.8);">
+        <div style="position: absolute; top: 1.5rem; left: 2rem; display: flex; gap: 8px;">
+          <span style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444;"></span>
+          <span style="width: 10px; height: 10px; border-radius: 50%; background: #F59E0B;"></span>
+          <span style="width: 10px; height: 10px; border-radius: 50%; background: #10B981;"></span>
+        </div>
+        
+        <span class="font-mono" style="color: var(--color-accent); font-size: 0.9rem; letter-spacing: 0.15em; display: block; margin-bottom: 1rem;">[ SYSTEM INTEGRATION // 11 ]</span>
+        <h2 class="font-display" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-top: 1.5rem; color: #fff; margin-bottom: 2rem; line-height: 1.1;">INITIALIZE SECURE DEMO</h2>
+        
+        <form style="display: flex; max-width: 600px; margin: 0 auto; gap: 1rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.5rem; background: rgba(0,0,0,0.2);">
+          <input type="email" placeholder="Enter corporate email..." required style="flex: 1; background: transparent; border: none; outline: none; padding: 1rem; color: #fff; font-family: var(--font-mono); font-size: 1.1rem;">
+          <button type="submit" style="background: var(--color-accent); color: #0D1117; border: none; outline: none; padding: 1rem 2.5rem; font-weight: bold; font-family: var(--font-mono); border-radius: 6px; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.background='#00FF87'; this.style.color='#0D1117'" onmouseout="this.style.background='var(--color-accent)'">RUN_DEMO</button>
+        </form>
+      </div>
+
+      <!-- Footer links grid -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div style="max-width: 350px;">
+          <img src="./assets/logo-BKZez9j3.svg" alt="Smart Epsilon Logo" style="height: 38px; filter: brightness(0) invert(1); margin-bottom: 2rem;">
+          <p class="font-mono" style="color: rgba(255,255,255,0.4); font-size: 0.95rem; line-height: 1.7;">
+            Absolute serialization and logistics vision engine mapping global supply chain endpoints with cryptographic trust.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 6rem; font-family: var(--font-mono); color: rgba(255,255,255,0.5);">
+          <div>
+            <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 0.9rem; letter-spacing: 0.1em;">PLATFORM</h4>
+            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem; font-size: 0.9rem;">
+              <li><a href="#platform" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'">Track & Trace</a></li>
+              <li><a href="#xray-scanner" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'">Kavach Scanner</a></li>
+              <li><a href="#loyalty-passbook" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'">Loyalty Management</a></li>
+              <li><a href="#ai-video" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'">AI Video Vision</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 0.9rem; letter-spacing: 0.1em;">COMPANY</h4>
+            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem; font-size: 0.9rem;">
+              <li><a href="#about" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'">About Us</a></li>
+              <li><a href="#" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'">Careers</a></li>
+              <li><a href="#" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'">Resources</a></li>
+              <li><a href="#contact" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright row -->
+      <div style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.3); font-size: 0.85rem; font-family: var(--font-mono);">
+        <div>&copy; 2026 Smart Epsilon. All rights reserved.</div>
+        
+        <!-- Social Links -->
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
+          <a href="#" aria-label="LinkedIn" style="color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">
+            <svg style="width: 18px; height: 18px;" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram" style="color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#e1306c'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">
+            <svg style="width: 18px; height: 18px;" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" style="color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#1877f2'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">
+            <svg style="width: 18px; height: 18px;" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="YouTube" style="color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">
+            <svg style="width: 18px; height: 18px;" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div style="display: flex; gap: 2.5rem;">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FULLSCREEN MENU OVERLAY -->
+  <div id="menu-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(8, 10, 15, 0.97); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); z-index: 99; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; padding: 0 4rem;">
+    <div style="max-width: 600px; margin: 0 auto; width: 100%; display: flex; justify-content: center;">
+      <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 2.5rem; align-items: center;" id="menu-links-list">
+        
+        <!-- Platform -->
+        <li style="transition: opacity 0.3s; text-align: center;">
+          <a href="#platform-stack" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; color: #fff;">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent); letter-spacing: 0.15em; margin-bottom: 0.25rem;">01 // SYSTEM_OVERVIEW</span>
+            <span class="font-display" style="font-size: 3rem; font-weight: bold; line-height: 1.0; transition: color 0.3s; letter-spacing: -0.02em;">PLATFORM</span>
+          </a>
+        </li>
+
+        <!-- About -->
+        <li style="transition: opacity 0.3s; text-align: center;">
+          <a href="#about" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; color: #fff;">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent); letter-spacing: 0.15em; margin-bottom: 0.25rem;">02 // CORPORATE_INTEL</span>
+            <span class="font-display" style="font-size: 3rem; font-weight: bold; line-height: 1.0; transition: color 0.3s; letter-spacing: -0.02em;">ABOUT</span>
+          </a>
+        </li>
+
+        <!-- Industries -->
+        <li style="transition: opacity 0.3s; text-align: center;">
+          <a href="#industries" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; color: #fff;">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent); letter-spacing: 0.15em; margin-bottom: 0.25rem;">03 // INDUSTRIAL_SECTORS</span>
+            <span class="font-display" style="font-size: 3rem; font-weight: bold; line-height: 1.0; transition: color 0.3s; letter-spacing: -0.02em;">INDUSTRIES</span>
+          </a>
+        </li>
+
+        <!-- Cases -->
+        <li style="transition: opacity 0.3s; text-align: center;">
+          <a href="#cases" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; color: #fff;">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent); letter-spacing: 0.15em; margin-bottom: 0.25rem;">04 // SUCCESS_STORIES</span>
+            <span class="font-display" style="font-size: 3rem; font-weight: bold; line-height: 1.0; transition: color 0.3s; letter-spacing: -0.02em;">SUCCESS CASES</span>
+          </a>
+        </li>
+
+        <!-- Contact -->
+        <li style="transition: opacity 0.3s; text-align: center;">
+          <a href="#contact" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; color: #fff;">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent); letter-spacing: 0.15em; margin-bottom: 0.25rem;">05 // DISPATCH_CONTROL</span>
+            <span class="font-display" style="font-size: 3rem; font-weight: bold; line-height: 1.0; transition: color 0.3s; letter-spacing: -0.02em;">CONTACT</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+</body>
+</html>

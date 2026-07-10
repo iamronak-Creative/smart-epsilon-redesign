@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.DS_Store
+.gemini/
+*.log
+backup/
+extracted/
+Smart Epsilon Homepage v2 9Jul2026 copy.html
+
+# Publish Vite build for GitHub Pages under V2
+!V2/dist/
+!V2/dist/**
