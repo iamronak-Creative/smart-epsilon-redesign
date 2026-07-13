@@ -12,7 +12,7 @@ const PROBLEM_DATA = [
   {
     index: "01",
     heading: "Counterfeits drain your margin.",
-    text: "KAVACH gives every unit a cloud-bound identity. Customers verify authenticity by scanning — clones surface the moment they appear.",
+    text: "SHIELD gives every unit a cloud-bound identity. Customers verify authenticity by scanning — clones surface the moment they appear.",
     // Shield + QR mark — authenticity / fake detection
     svg: [
       '<path fill="none" stroke="#8b7fd4" stroke-width="2.25" stroke-linejoin="round" d="M50 12 L78 24 V48 C78 68 64 82 50 88 C36 82 22 68 22 48 V24 Z"/>',

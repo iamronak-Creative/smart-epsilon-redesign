@@ -11,7 +11,7 @@
 export const nav = {
   solutions: [
     { name: "TrakNode — Track & Trace", icon: "route", href: "#track-trace", hook: "Serialization & real-time visibility" },
-    { name: "KAVACH — Anti-Counterfeiting", icon: "shield-check", href: "#kavach", hook: "Overt, covert & forensic protection" },
+    { name: "SHIELD — Anticounterfeiting Solution", icon: "shield-check", href: "#kavach", hook: "Overt, covert & forensic protection" },
     { name: "Loyalty & Rewards", icon: "gift", href: "#loyalty", hook: "Consumer & retailer engagement" },
     { name: "AI Video Intelligence", icon: "video", href: "#ai-video", hook: "CCTV into supply chain intelligence" },
     { name: "Holographic Security Labels", icon: "hexagon", href: "#kavach", hook: "Tamper-evident labels, ordered online" },
@@ -77,7 +77,7 @@ export const platformModules = [
   {
     id: "kavach",
     eyebrow: "Solution 02",
-    name: "KAVACH — Anti-Counterfeiting",
+    name: "SHIELD — Anticounterfeiting Solution",
     icon: "shield-check",
     color: "#5be0c8",
     tagline: "Overt, covert, and forensic protection — verified in seconds.",
@@ -98,7 +98,7 @@ export const platformModules = [
     name: "AI Video Intelligence",
     icon: "video",
     color: "#c3b6f2",
-    tagline: "Transform warehouse and logistics operations using AI-powered video analytics.",
+    tagline: "Your CCTV, Our Intelligence Algorithm.",
     features: ["Loading/unloading verification", "Theft & anomaly detection", "Process compliance monitoring"],
   },
   {
@@ -200,7 +200,7 @@ export const faqs = [
 
 export const footer = {
   columns: [
-    { title: "Products", links: [{ label: "TrakNode — Track & Trace", href: "#track-trace" }, { label: "KAVACH — Anti-Counterfeit", href: "#kavach" }, { label: "Loyalty Platform", href: "#loyalty" }, { label: "AI Video Intelligence", href: "#ai-video" }] },
+    { title: "Products", links: [{ label: "TrakNode — Track & Trace", href: "#track-trace" }, { label: "SHIELD — Anti-Counterfeit", href: "#kavach" }, { label: "Loyalty Platform", href: "#loyalty" }, { label: "AI Video Intelligence", href: "#ai-video" }] },
     { title: "Industries", links: [{ label: "Agrochemicals", href: "#industries" }, { label: "Lubricants & Auto", href: "#industries" }, { label: "Seeds", href: "#industries" }, { label: "Pharmaceuticals", href: "#industries" }, { label: "CPG & Foods", href: "#industries" }] },
     { title: "Company", links: [{ label: "Why Smart Epsilon", href: "#why" }, { label: "Case Studies", href: "#cases" }, { label: "Careers", href: "#" }, { label: "Contact", href: "#cta" }] },
   ],

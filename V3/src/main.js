@@ -334,7 +334,7 @@ if (horizontalWrapper) {
 // 4. Platform Stacking Cards Pin & Stack Animation
 // ==========================================
 // ==========================================
-// 5. X-Ray Scanner (Kavach)
+// 5. X-Ray Scanner (SHIELD)
 // ==========================================
 const xrayTrigger = document.getElementById('xray-trigger')
 const xrayMask = document.getElementById('xray-mask')
