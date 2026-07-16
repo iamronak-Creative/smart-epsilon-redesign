@@ -1337,12 +1337,12 @@ body {
 }
 
 .cta-intro__title {
-  font-size: clamp(2.35rem, 5.5vw, 3.75rem);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 800;
   line-height: 1.02;
   letter-spacing: -0.035em;
   margin: 0.65rem 0 0;
-  max-width: 11ch;
+  max-width: 30ch;
 }
 
 .cta-intro__title .t-accent {
