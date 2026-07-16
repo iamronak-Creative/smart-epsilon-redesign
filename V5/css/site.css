@@ -403,23 +403,23 @@ body {
 }
 
 .site-header:not(.is-scrolled) .brand img {
-  filter: none;
+  filter: brightness(0) invert(1);
 }
 
 .site-header:not(.is-scrolled) .nav-link {
-  color: var(--ink-soft);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .site-header:not(.is-scrolled) .nav-link:hover,
 .site-header:not(.is-scrolled) .nav-item.is-open > .nav-link {
-  color: var(--accent);
-  background: rgba(15, 15, 37, 0.05);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .site-header:not(.is-scrolled) .nav-toggle {
-  border-color: var(--line-strong);
-  background: rgba(15, 15, 37, 0.05);
-  color: var(--ink);
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
 }
 
 .site-header:not(.is-scrolled) .btn-primary.nav-cta {
@@ -479,7 +479,17 @@ body {
   padding-top: var(--nav-h);
   padding-bottom: 4rem;
   overflow: hidden;
-  background: #ffffff;
+  background: #0b0a1a;
+  
+  /* Locally scope dark mode variables for hero text readability */
+  --ink: #f4f3f8;
+  --ink-soft: rgba(244, 243, 248, 0.62);
+  --accent: #8b7fd4;
+  --accent-bright: #b8aef0;
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --line: rgba(255, 255, 255, 0.08);
+  
+  color: var(--ink);
 }
 
 .stage--hero::before {
@@ -489,8 +499,8 @@ body {
   z-index: 1;
   pointer-events: none;
   background:
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.93) 80%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.5) 100%);
+    radial-gradient(circle at center, rgba(11, 10, 26, 0.62) 0%, rgba(11, 10, 26, 0.94) 85%),
+    linear-gradient(180deg, rgba(11, 10, 26, 0.3) 0%, transparent 25%, transparent 75%, rgba(11, 10, 26, 0.5) 100%);
 }
 
 .hero-video-wrapper {
@@ -514,8 +524,8 @@ body {
   transform: translate(-50%, -50%);
   pointer-events: none;
   border: none;
-  opacity: 0.14;
-  mix-blend-mode: multiply;
+  opacity: 0.35; /* Adjusted transparency for visibility */
+  mix-blend-mode: screen; /* Lightens and blends with dark background */
 }
 
 .hero-video-overlay {
@@ -701,9 +711,9 @@ body {
 }
 
 .stage--hero .btn-ghost {
-  color: var(--ink);
-  border-color: rgba(15, 15, 37, 0.2);
-  background: rgba(15, 15, 37, 0.02);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* Hero ticker */
