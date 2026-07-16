@@ -2416,15 +2416,68 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 310px;
-  min-height: 410px;
-  border-radius: 22px;
-  padding: 2.2rem 1.8rem;
+  width: min(840px, 92vw);
+  height: 430px;
+  border-radius: 24px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   box-shadow: 0 20px 48px -12px rgba(11, 10, 26, 0.15);
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease, background-color 0.6s ease, color 0.6s ease;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.coverflow-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2.2rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.coverflow-card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background: #fcfcfd;
+  border: 1px solid rgba(17, 28, 46, 0.06);
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.02);
+}
+
+.coverflow-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.coverflow-card:hover .coverflow-card-image img {
+  transform: scale(1.04);
+}
+
+.coverflow-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .coverflow-card {
+    height: auto;
+    min-height: 420px;
+  }
+  .coverflow-card-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .coverflow-card-image {
+    display: none;
+  }
 }
 
 .coverflow-card.inactive {
@@ -2647,7 +2700,9 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
 }
 
 .features-capsule-tablist {
-  display: inline-flex;
+  display: flex;
+  width: 100%;
+  max-width: 800px;
   gap: 8px;
   background: #ffffff;
   padding: 6px;
@@ -2657,9 +2712,11 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
 
 .features-capsule-tab {
   display: flex;
+  flex: 1;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 99px;
   border: none;
   background: none;
@@ -2681,9 +2738,9 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
 }
 
 .features-capsule-tab.is-active {
-  background: #262626 !important;
+  background: #2b2868 !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 15px rgba(38, 38, 38, 0.25);
+  box-shadow: 0 4px 15px rgba(43, 40, 104, 0.25);
 }
 
 .features-mockup-wrapper {
