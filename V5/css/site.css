@@ -765,6 +765,17 @@ body {
   color: var(--accent-bright);
 }
 
+.hero-ticker__group span:nth-child(1),
+.hero-ticker__group span:nth-child(5) {
+  color: var(--accent-bright) !important;
+}
+
+.hero-ticker__group span:nth-child(3),
+.hero-ticker__group span:nth-child(3) em,
+.hero-ticker__group span:nth-child(7) {
+  color: #ffffff !important;
+}
+
 @keyframes ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-25%); }
