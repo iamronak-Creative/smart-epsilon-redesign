@@ -616,7 +616,7 @@ body {
 .hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 960px;
+  max-width: 1200px;
   margin-inline: auto;
   text-align: center;
   display: flex;
@@ -661,7 +661,7 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(3rem, 6.5vw, 5.4rem);
+  font-size: clamp(2.5rem, 5vw, 4.35rem);
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.038em;
