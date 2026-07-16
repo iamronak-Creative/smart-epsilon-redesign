@@ -851,8 +851,8 @@ body {
   inset: 0;
   z-index: 1;
   opacity: 0.6;
-  background-image: linear-gradient(to right, rgba(14, 165, 233, 0.13) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(14, 165, 233, 0.13) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(107, 98, 172, 0.12) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(107, 98, 172, 0.12) 1px, transparent 1px);
   background-size: var(--shooting-stars-grid-size) var(--shooting-stars-grid-size);
 }
 
@@ -861,7 +861,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: radial-gradient(circle at center, transparent 0%, rgba(255, 255, 255, 0.3) 54%, rgba(255, 255, 255, 0.92) 100%);
+  background: radial-gradient(circle at center, transparent 0%, rgba(248, 248, 251, 0.25) 54%, #f8f8fb 100%);
 }
 
 .shooting-stars-glow {
@@ -869,8 +869,8 @@ body {
   position: absolute;
   inset: 0;
   z-index: 3;
-  background: radial-gradient(circle at var(--shooting-stars-glow-x) var(--shooting-stars-glow-y), rgba(8, 145, 178, 0.28), transparent 34%),
-              radial-gradient(circle at 72% 72%, rgba(99, 102, 241, 0.18), transparent 30%);
+  background: radial-gradient(circle at var(--shooting-stars-glow-x) var(--shooting-stars-glow-y), rgba(107, 98, 172, 0.15), transparent 40%),
+              radial-gradient(circle at 72% 72%, rgba(139, 127, 212, 0.1), transparent 30%);
 }
 
 .static-stars-container,
@@ -883,8 +883,8 @@ body {
 .static-star {
   position: absolute;
   border-radius: 50%;
-  background: #0891b2;
-  box-shadow: 0 0 12px rgba(14, 165, 233, 0.5);
+  background: #8b7fd4;
+  box-shadow: 0 0 12px rgba(139, 127, 212, 0.6);
   transform: translate(-50%, -50%);
 }
 

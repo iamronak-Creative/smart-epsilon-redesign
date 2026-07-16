@@ -28,7 +28,6 @@ export function initShootingStarsGrid() {
   glowOverlay.className = "shooting-stars-glow";
   container.appendChild(glowOverlay);
 
-
   // Create Static Stars
   const starCount = 48;
   const staticStarsContainer = document.createElement("div");
@@ -104,8 +103,8 @@ export function initShootingStarsGrid() {
       ? (direction === 1 ? "90deg" : "270deg")
       : (direction === 1 ? "180deg" : "0deg");
 
-    star.style.background = `linear-gradient(${gradientDirection}, transparent 0%, rgba(8,145,178,0.14) 18%, rgba(103,232,249,0.92) 52%, rgba(255,255,255,0.96) 58%, transparent 100%)`;
-    star.style.boxShadow = "0 0 16px rgba(6,182,212,0.46), 0 0 28px rgba(148,163,184,0.18)";
+    star.style.background = `linear-gradient(${gradientDirection}, transparent 0%, rgba(107,98,172,0.14) 18%, rgba(184,174,240,0.92) 52%, rgba(255,255,255,0.96) 58%, transparent 100%)`;
+    star.style.boxShadow = "0 0 16px rgba(107,98,172,0.46), 0 0 28px rgba(148,163,184,0.18)";
     star.style.opacity = 0;
     star.style.position = "absolute";
     star.style.borderRadius = "999px";
@@ -126,27 +125,38 @@ export function initShootingStarsGrid() {
 
     shootingStarsContainer.appendChild(star);
 
-    // Shooting runner movement animation with GSAP
+    // Shooting runner movement animation with GSAP keyframes
     const startVal = direction === 1 ? "-18%" : "112%";
     const endVal = direction === 1 ? "112%" : "-18%";
 
-    const vars = {
-      opacity: [0, 1, 1, 0],
-      duration: duration,
-      delay: delay,
-      repeat: -1,
-      repeatDelay: repeatDelay,
-      ease: "power1.out",
-    };
-
     if (axis === "horizontal") {
-      vars.left = [startVal, endVal];
-      vars.scaleX = [0.35, 1.08, 0.8];
-      gsap.fromTo(star, { left: startVal, scaleX: 0.35, opacity: 0 }, vars);
+      gsap.to(star, {
+        keyframes: [
+          { left: startVal, opacity: 0, scaleX: 0.35, duration: 0 },
+          { opacity: 1, scaleX: 1.08, duration: 0.2 },
+          { opacity: 1, scaleX: 1.08, duration: 0.5 },
+          { left: endVal, opacity: 0, scaleX: 0.8, duration: 0.3 }
+        ],
+        duration: duration,
+        delay: delay,
+        repeat: -1,
+        repeatDelay: repeatDelay,
+        ease: "none"
+      });
     } else {
-      vars.top = [startVal, endVal];
-      vars.scaleY = [0.35, 1.08, 0.8];
-      gsap.fromTo(star, { top: startVal, scaleY: 0.35, opacity: 0 }, vars);
+      gsap.to(star, {
+        keyframes: [
+          { top: startVal, opacity: 0, scaleY: 0.35, duration: 0 },
+          { opacity: 1, scaleY: 1.08, duration: 0.2 },
+          { opacity: 1, scaleY: 1.08, duration: 0.5 },
+          { top: endVal, opacity: 0, scaleY: 0.8, duration: 0.3 }
+            ],
+        duration: duration,
+        delay: delay,
+        repeat: -1,
+        repeatDelay: repeatDelay,
+        ease: "none"
+      });
     }
   }
 }
