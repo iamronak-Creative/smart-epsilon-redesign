@@ -28,17 +28,6 @@ export function initShootingStarsGrid() {
   glowOverlay.className = "shooting-stars-glow";
   container.appendChild(glowOverlay);
 
-  // Mouse move interaction
-  stage.addEventListener("pointermove", (e) => {
-    const rect = container.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    gsap.to(container, {
-      "--shooting-stars-glow-x": `${x}%`,
-      "--shooting-stars-glow-y": `${y}%`,
-      duration: 0.1,
-    });
-  });
 
   // Create Static Stars
   const starCount = 48;
