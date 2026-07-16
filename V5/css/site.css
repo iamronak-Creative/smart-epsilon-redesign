@@ -799,7 +799,7 @@ body {
   font-weight: 800;
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(139, 127, 212, 0.25);
+  -webkit-text-stroke: 3px rgba(139, 127, 212, 0.45);
   margin-bottom: -1.5rem;
 }
 
@@ -2241,4 +2241,5 @@ h1, h2, h3, h4 {
 h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-tile h3, .voices-head__title, .mega-link-text strong {
   font-family: var(--font-display) !important;
   font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
 }
