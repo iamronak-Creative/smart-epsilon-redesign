@@ -1294,6 +1294,11 @@ body {
     linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg) 100%);
 }
 
+.stage--cta #hero-map {
+  height: 80%;
+  bottom: auto;
+}
+
 .stage--cta::before {
   content: "";
   position: absolute;
