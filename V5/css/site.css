@@ -739,9 +739,16 @@ body {
 
 .hero-ticker__track {
   display: flex;
-  gap: 3rem;
   width: max-content;
   animation: ticker 35s linear infinite;
+}
+
+.hero-ticker__group {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 3rem;
+  flex-shrink: 0;
 }
 
 .hero-ticker__track span {
@@ -759,7 +766,8 @@ body {
 }
 
 @keyframes ticker {
-  to { transform: translateX(-50%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
 }
 
 /* ---- PROBLEM scrolly ---- */
