@@ -34,7 +34,7 @@ function initMegaMenu() {
   const openItem = (item) => {
     if (suppressOpen) return;
     const link = item.querySelector(".nav-link--mega, .nav-link");
-    const panel = item.querySelector(".mega-panel");
+    const panel = item.querySelector(".mega-panel, .dropdown-panel");
     closeAll(item);
     item.classList.add("is-open");
     link?.setAttribute("aria-expanded", "true");
@@ -43,7 +43,7 @@ function initMegaMenu() {
 
   const closeItem = (item) => {
     const link = item.querySelector(".nav-link--mega, .nav-link");
-    const panel = item.querySelector(".mega-panel");
+    const panel = item.querySelector(".mega-panel, .dropdown-panel");
     item.classList.remove("is-open");
     link?.setAttribute("aria-expanded", "false");
     if (panel) setPanelState(panel, false);
@@ -51,7 +51,7 @@ function initMegaMenu() {
 
   items.forEach((item) => {
     const link = item.querySelector(".nav-link--mega, .nav-link");
-    const panel = item.querySelector(".mega-panel");
+    const panel = item.querySelector(".mega-panel, .dropdown-panel");
     if (!link || !panel) return;
 
     setPanelState(panel, false);

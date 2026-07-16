@@ -294,27 +294,44 @@ function initNavReveal() {
 }
 
 function initFeatureTabs() {
-  const tabs = document.querySelectorAll(".features-tab");
+  const tabs = document.querySelectorAll(".features-capsule-tab");
   const screenshots = document.querySelectorAll(".features-screenshot");
+  const contents = document.querySelectorAll(".features-slide-content");
   if (!tabs.length || !screenshots.length) return;
 
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => {
-      // Deactivate all
+      // Deactivate all tabs
       tabs.forEach(t => {
         t.classList.remove("is-active");
         t.setAttribute("aria-selected", "false");
       });
-      screenshots.forEach(s => s.classList.remove("is-active"));
+      // Fade out all screenshots
+      screenshots.forEach(s => {
+        gsap.to(s, { opacity: 0, duration: 0.3, ease: "power1.out" });
+        s.classList.remove("is-active");
+      });
+      // Hide all contents
+      contents.forEach(c => {
+        c.style.display = "none";
+        c.classList.remove("is-active");
+      });
 
-      // Activate clicked
+      // Activate clicked tab
       tab.classList.add("is-active");
       tab.setAttribute("aria-selected", "true");
-      const targetScreenshot = document.querySelector(`.features-screenshot[data-index="${index}"]`);
+
+      const targetScreenshot = screenshots[index];
       if (targetScreenshot) {
         targetScreenshot.classList.add("is-active");
-        // Simple subtle entrance transition on mock-ups
-        gsap.fromTo(targetScreenshot, { scale: 0.96, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "power2.out" });
+        gsap.fromTo(targetScreenshot, { scale: 0.97, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "power2.out" });
+      }
+
+      const targetContent = contents[index];
+      if (targetContent) {
+        targetContent.style.display = "block";
+        targetContent.classList.add("is-active");
+        gsap.fromTo(targetContent, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" });
       }
     });
   });

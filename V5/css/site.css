@@ -2369,6 +2369,10 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
   transform: translateX(-50%) translateY(0);
 }
 
+.dropdown-panel[hidden] {
+  display: flex !important;
+}
+
 .dropdown-link {
   display: block;
   padding: 0.6rem 0.8rem;
@@ -2639,131 +2643,89 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
 
 /* ============ INSIDE THE PLATFORM FEATURES SECTION ============ */
 .features-section {
-  padding-block: 6.5rem;
   background: var(--bg-soft, #f8f8fb);
-  overflow: hidden;
 }
 
-.features-container {
-  max-width: 1300px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3.5rem;
-}
-
-@media (min-width: 1024px) {
-  .features-container {
-    grid-template-columns: 0.85fr 1.15fr;
-  }
-}
-
-.features-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.features-sticky-box {
-  position: sticky;
-  top: 120px;
-}
-
-.features-tablist {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 2rem;
-}
-
-.features-tab {
-  background: none;
-  border: none;
-  text-align: left;
-  padding: 1.25rem 1.5rem;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: background 0.3s, border-left-color 0.3s, color 0.3s;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  border-left: 3px solid transparent;
-  color: var(--ink-soft);
-}
-
-.features-tab.is-active {
+.features-capsule-tablist {
+  display: inline-flex;
+  gap: 8px;
   background: #ffffff;
-  border-left-color: var(--accent);
-  color: var(--ink);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  padding: 6px;
+  border-radius: 99px;
+  border: 1px solid rgba(17, 28, 46, 0.08);
 }
 
-.features-tab-num {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--accent);
-}
-
-.features-tab-title {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.15rem;
-}
-
-.features-tab-desc {
-  font-size: 0.875rem;
-  line-height: 1.45;
-  color: var(--ink-soft);
-  opacity: 0.85;
-  margin-top: 4px;
-  display: none;
-}
-
-.features-tab.is-active .features-tab-desc {
-  display: block;
-}
-
-.features-right {
+.features-capsule-tab {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 99px;
+  border: none;
+  background: none;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.features-capsule-tab svg {
+  stroke-width: 2px;
+  transition: transform 0.3s;
+}
+
+.features-capsule-tab:hover svg {
+  transform: scale(1.1);
+}
+
+.features-capsule-tab.is-active {
+  background: #262626 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(38, 38, 38, 0.25);
 }
 
 .features-mockup-wrapper {
-  background: #ffffff;
-  border: 1px solid rgba(17, 28, 46, 0.08);
-  border-radius: 24px;
-  padding: 1rem;
-  box-shadow: 0 30px 70px rgba(11, 10, 26, 0.12);
-  width: 100%;
-  max-width: 680px;
-  aspect-ratio: 16 / 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .features-screenshot {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 14px;
   transition: opacity 0.4s ease, transform 0.4s ease;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: calc(100% - 2rem);
-  height: calc(100% - 2rem);
-  opacity: 0;
-  pointer-events: none;
 }
 
-.features-screenshot.is-active {
+.features-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #111111;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.features-pill-tag svg {
+  color: #ffffff;
+  stroke-width: 2px;
+}
+
+/* ============ CLIENT LOGOS TICKER ANIMATION ============ */
+@keyframes client-ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track img {
+  opacity: 0.6;
+  transition: opacity 0.3s, filter 0.3s;
+}
+
+.ticker-track img:hover {
   opacity: 1;
-  pointer-events: auto;
+  filter: none !important;
 }
