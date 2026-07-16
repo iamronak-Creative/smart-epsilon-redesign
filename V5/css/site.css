@@ -2339,3 +2339,431 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
   font-weight: 500 !important;
   letter-spacing: 0.02em !important;
 }
+
+/* ============ NAV DROPDOWNS & MEGAPANEL OVERRIDES ============ */
+.dropdown-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 240px;
+  padding: 0.5rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s var(--ease), transform 0.22s var(--ease), visibility 0.22s;
+  z-index: var(--z-overlay);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.nav-item.is-open .dropdown-panel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-link {
+  display: block;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-link:hover {
+  background: rgba(107, 98, 172, 0.08);
+  color: var(--accent);
+}
+
+/* Header link chevron rotate on hover */
+.nav-item.is-open .nav-chevron {
+  transform: rotate(180deg);
+}
+
+/* Tabler icon offsets inside nav links */
+.mega-link-icon i {
+  color: var(--accent);
+  transition: color 0.2s;
+}
+.mega-link:hover .mega-link-icon i {
+  color: var(--accent-bright);
+}
+
+/* ============ SOLUTIONS COVERFLOW SLIDER ============ */
+.solutions-coverflow {
+  position: relative;
+  height: 480px;
+  width: 100%;
+  margin-block: 2.5rem;
+  overflow: visible;
+}
+
+.coverflow-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 310px;
+  min-height: 410px;
+  border-radius: 22px;
+  padding: 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 48px -12px rgba(11, 10, 26, 0.15);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease, background-color 0.6s ease, color 0.6s ease;
+  cursor: pointer;
+}
+
+.coverflow-card.inactive {
+  background: #f1f0f7;
+  color: var(--ink-soft);
+}
+
+.coverflow-card.inactive .card-eyebrow {
+  color: rgba(107, 98, 172, 0.65);
+}
+
+.coverflow-card.inactive .card-icon-wrapper {
+  background: rgba(107, 98, 172, 0.08);
+  color: var(--accent);
+}
+
+.coverflow-card.inactive .feature-item {
+  color: var(--ink-soft);
+}
+
+.coverflow-card.inactive .feature-icon {
+  color: var(--accent);
+}
+
+.coverflow-card.active {
+  background: #2b2868; /* Brand deep purple */
+  color: #ffffff;
+  z-index: 10;
+}
+
+.coverflow-card.active .card-eyebrow {
+  color: #b8aef0;
+}
+
+.coverflow-card.active .card-icon-wrapper {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.coverflow-card.active .feature-item {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.coverflow-card.active .feature-icon {
+  color: #b8aef0;
+}
+
+.card-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  transition: color 0.3s;
+}
+
+.card-icon-wrapper {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card-icon-wrapper i {
+  font-size: 22px;
+}
+
+.coverflow-card h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem;
+  color: inherit !important;
+}
+
+.card-tagline {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  margin: 0 0 1.5rem;
+  opacity: 0.85;
+}
+
+.card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: auto;
+}
+
+.feature-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  font-size: 15px;
+  flex: none;
+  margin-top: 2px;
+  transition: color 0.3s;
+}
+
+.feature-item {
+  font-size: 12.5px;
+  line-height: 1.45;
+  transition: color 0.3s;
+}
+
+.coverflow-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2rem;
+}
+
+.coverflow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(107, 98, 172, 0.25);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.coverflow-dot.is-active {
+  background: var(--accent) !important;
+  transform: scale(1.3);
+}
+
+/* ============ BUSINESS IMPACT CARDS ============ */
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .impact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.impact-card {
+  background: #ffffff;
+  border: 1px solid rgba(17, 28, 46, 0.08);
+  border-radius: 20px;
+  padding: 2.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(17, 28, 46, 0.05);
+  transition: box-shadow 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+.impact-card:hover {
+  box-shadow: 0 20px 48px -20px rgba(17, 28, 46, 0.28);
+  transform: translateY(-4px);
+}
+
+.impact-icon-wrapper {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: rgba(107, 98, 172, 0.1);
+  color: var(--accent);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.impact-icon-wrapper i {
+  font-size: 24px;
+}
+
+.impact-card h3 {
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.65rem;
+  color: var(--ink) !important;
+}
+
+.impact-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
+}
+
+.impact-stat-wrapper {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(17, 28, 46, 0.09);
+}
+
+.impact-stat-num {
+  font-weight: 800;
+  font-size: 1.65rem;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.impact-stat-lbl {
+  display: block;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+/* ============ INSIDE THE PLATFORM FEATURES SECTION ============ */
+.features-section {
+  padding-block: 6.5rem;
+  background: var(--bg-soft, #f8f8fb);
+  overflow: hidden;
+}
+
+.features-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+}
+
+@media (min-width: 1024px) {
+  .features-container {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+}
+
+.features-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.features-sticky-box {
+  position: sticky;
+  top: 120px;
+}
+
+.features-tablist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.features-tab {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.3s, border-left-color 0.3s, color 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border-left: 3px solid transparent;
+  color: var(--ink-soft);
+}
+
+.features-tab.is-active {
+  background: #ffffff;
+  border-left-color: var(--accent);
+  color: var(--ink);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.features-tab-num {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.features-tab-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.features-tab-desc {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  opacity: 0.85;
+  margin-top: 4px;
+  display: none;
+}
+
+.features-tab.is-active .features-tab-desc {
+  display: block;
+}
+
+.features-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-mockup-wrapper {
+  background: #ffffff;
+  border: 1px solid rgba(17, 28, 46, 0.08);
+  border-radius: 24px;
+  padding: 1rem;
+  box-shadow: 0 30px 70px rgba(11, 10, 26, 0.12);
+  width: 100%;
+  max-width: 680px;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.features-screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.features-screenshot.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}

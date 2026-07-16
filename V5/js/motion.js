@@ -73,7 +73,8 @@ export function initPremiumMotion() {
 
   initHeroMotion();
   initProblemScrolly();
-  initProductRail();
+  initCoverflow();
+  initFeatureTabs();
   initMagneticButtons();
   initCaseTiles();
   initNavReveal();
@@ -169,60 +170,96 @@ function initProblemScrolly() {
   });
 }
 
-function initProductRail() {
-  const pin = document.querySelector("[data-products-pin]");
-  const sticky = document.querySelector(".products-sticky");
-  const tabs = document.querySelectorAll("[data-product-tab]");
-  const panels = document.querySelectorAll("[data-product-panel]");
-  if (!pin || !sticky || tabs.length < 2) return;
+function initCoverflow() {
+  const cards = document.querySelectorAll(".coverflow-card");
+  const dots = document.querySelectorAll(".coverflow-dot");
+  if (!cards.length) return;
 
-  const show = (idx) => {
-    tabs.forEach((tab, i) => {
-      const on = i === idx;
-      tab.classList.toggle("is-active", on);
-      tab.setAttribute("aria-selected", on ? "true" : "false");
-    });
-    panels.forEach((panel, i) => {
-      const on = i === idx;
-      panel.hidden = !on;
-      panel.classList.toggle("is-active", on);
-      if (on) {
-        const img = panel.querySelector("img");
-        if (img) gsap.fromTo(img, { scale: 1.05, opacity: 0.7 }, { scale: 1, opacity: 1, duration: 0.55, ease: "power2.out" });
-        gsap.fromTo(panel.querySelector(".product-panel__copy"), { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power2.out" });
+  let activeIndex = 0;
+  let autoRotateInterval;
+
+  function updateCoverflow() {
+    cards.forEach((card, index) => {
+      let diff = index - activeIndex;
+      // Handle wrapping for 4 cards
+      if (diff > 2) diff -= 4;
+      if (diff < -2) diff += 4;
+
+      const dist = Math.abs(diff);
+      const scale = dist === 0 ? 1 : dist === 1 ? 0.85 : 0.72;
+      const opacity = dist === 0 ? 1 : dist === 1 ? 0.95 : 0.35;
+      const zIndex = 10 - dist;
+      // Spread cards out dynamically
+      const offsetPx = diff * 280;
+
+      card.style.transform = `translate(calc(-50% + ${offsetPx}px), -50%) scale(${scale})`;
+      card.style.opacity = opacity;
+      card.style.zIndex = zIndex;
+
+      if (dist === 0) {
+        card.classList.remove("inactive");
+        card.classList.add("active");
+      } else {
+        card.classList.remove("active");
+        card.classList.add("inactive");
       }
     });
-  };
 
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => show(Number(tab.dataset.productTab)));
-  });
-
-  if (isMobile) {
-    panels.forEach((panel, i) => {
-      panel.hidden = false;
-      if (i > 0) panel.style.marginTop = "2.5rem";
+    dots.forEach((dot, index) => {
+      if (index === activeIndex) {
+        dot.classList.add("is-active");
+      } else {
+        dot.classList.remove("is-active");
+      }
     });
-    pin.style.minHeight = "auto";
-    return;
   }
 
-  show(0);
+  function nextCard() {
+    activeIndex = (activeIndex + 1) % cards.length;
+    updateCoverflow();
+  }
 
-  ScrollTrigger.create({
-    trigger: pin,
-    start: "top top",
-    end: "bottom bottom",
-    pin: sticky,
-    scrub: 0.3,
-    onUpdate: (self) => {
-      const idx = Math.min(panels.length - 1, Math.floor(self.progress * panels.length));
-      if (idx !== Number(pin.dataset.currentAct || -1)) {
-        pin.dataset.currentAct = String(idx);
-        show(idx);
-      }
-    },
+  // Clicks on card selects it
+  cards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+      activeIndex = index;
+      updateCoverflow();
+      resetAutoRotate();
+    });
   });
+
+  // Clicks on dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      activeIndex = index;
+      updateCoverflow();
+      resetAutoRotate();
+    });
+  });
+
+  function startAutoRotate() {
+    autoRotateInterval = setInterval(nextCard, 4500);
+  }
+
+  function stopAutoRotate() {
+    clearInterval(autoRotateInterval);
+  }
+
+  function resetAutoRotate() {
+    stopAutoRotate();
+    startAutoRotate();
+  }
+
+  // Hover triggers
+  const container = document.querySelector(".solutions-coverflow");
+  if (container) {
+    container.addEventListener("mouseenter", stopAutoRotate);
+    container.addEventListener("mouseleave", startAutoRotate);
+  }
+
+  // Initial draw
+  updateCoverflow();
+  startAutoRotate();
 }
 
 function initMagneticButtons() {
@@ -254,4 +291,31 @@ function initCaseTiles() {
 
 function initNavReveal() {
   gsap.from(".site-header", { y: -20, duration: 0.55, ease: "power3.out" });
+}
+
+function initFeatureTabs() {
+  const tabs = document.querySelectorAll(".features-tab");
+  const screenshots = document.querySelectorAll(".features-screenshot");
+  if (!tabs.length || !screenshots.length) return;
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      // Deactivate all
+      tabs.forEach(t => {
+        t.classList.remove("is-active");
+        t.setAttribute("aria-selected", "false");
+      });
+      screenshots.forEach(s => s.classList.remove("is-active"));
+
+      // Activate clicked
+      tab.classList.add("is-active");
+      tab.setAttribute("aria-selected", "true");
+      const targetScreenshot = document.querySelector(`.features-screenshot[data-index="${index}"]`);
+      if (targetScreenshot) {
+        targetScreenshot.classList.add("is-active");
+        // Simple subtle entrance transition on mock-ups
+        gsap.fromTo(targetScreenshot, { scale: 0.96, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "power2.out" });
+      }
+    });
+  });
 }

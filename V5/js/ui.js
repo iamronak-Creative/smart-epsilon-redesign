@@ -97,10 +97,10 @@ function initProductSelectLinks() {
     el.addEventListener("click", () => {
       const idx = el.getAttribute("data-product-select");
       if (idx == null) return;
-      // Defer so hash scroll / drawer close can settle, then activate tab
+      // Defer so hash scroll / drawer close can settle, then activate coverflow card
       requestAnimationFrame(() => {
-        const tab = document.querySelector(`[data-product-tab="${idx}"]`);
-        tab?.click();
+        const card = document.querySelector(`.coverflow-card[data-index="${idx}"]`);
+        card?.click();
       });
     });
   });
