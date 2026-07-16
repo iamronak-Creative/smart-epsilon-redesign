@@ -1305,6 +1305,7 @@ body {
 
 .stage--cta #hero-map {
   height: 80%;
+  top: -100px;
   bottom: auto;
 }
 
