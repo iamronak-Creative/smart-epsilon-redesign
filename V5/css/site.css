@@ -679,6 +679,15 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+#cycle-word {
+  display: inline-block;
+  text-align: center;
+  font-style: italic;
+  padding: 0.18em 0.35em;
+  margin: -0.18em -0.35em;
+  vertical-align: baseline;
+}
+
 @media (max-width: 640px) {
   .hero-title {
     font-size: clamp(1.65rem, 8vw, 2.75rem);
