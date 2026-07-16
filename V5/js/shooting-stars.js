@@ -3,7 +3,7 @@ export function initShootingStarsGrid() {
   if (!container) return;
 
   const squareSize = 28; // 20% larger than 24px
-  const strokeColor = "rgba(107, 98, 172, 0.11)"; // Brand purple grid lines
+  const strokeColor = "#ffffff"; // White grid lines
 
   function drawGrid() {
     container.innerHTML = "";
@@ -33,7 +33,7 @@ export function initShootingStarsGrid() {
     path.setAttribute("d", `M ${squareSize} 0 L 0 0 0 ${squareSize}`);
     path.setAttribute("fill", "none");
     path.setAttribute("stroke", strokeColor);
-    path.setAttribute("stroke-width", "1");
+    path.setAttribute("stroke-width", "3");
 
     pattern.appendChild(path);
     defs.appendChild(pattern);
