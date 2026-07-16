@@ -666,7 +666,7 @@ body {
   line-height: 1.08;
   letter-spacing: -0.038em;
   margin: 0;
-  max-width: 32ch;
+  max-width: 42ch;
   text-wrap: balance;
 }
 
@@ -2242,5 +2242,5 @@ h1, h2, h3, h4 {
 
 h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-tile h3, .voices-head__title, .mega-link-text strong {
   font-family: var(--font-display) !important;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
 }
