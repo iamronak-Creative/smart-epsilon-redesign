@@ -770,9 +770,22 @@ body {
   100% { transform: translateX(-25%); }
 }
 
-/* ---- PROBLEM scrolly ---- */
 .stage--problem {
-  background: var(--bg);
+  position: relative;
+  background: #f8f8fb;
+}
+
+.stage--problem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.25;
+  background-image:
+    linear-gradient(rgba(139, 127, 212, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 127, 212, 0.12) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, #000 30%, transparent 80%);
+  pointer-events: none;
 }
 
 .problem-pin {
