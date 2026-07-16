@@ -499,8 +499,8 @@ body {
   z-index: 1;
   pointer-events: none;
   background:
-    radial-gradient(circle at center, rgba(11, 10, 26, 0.62) 0%, rgba(11, 10, 26, 0.94) 85%),
-    linear-gradient(180deg, rgba(11, 10, 26, 0.3) 0%, transparent 25%, transparent 75%, rgba(11, 10, 26, 0.5) 100%);
+    radial-gradient(circle at center, rgba(11, 10, 26, 0.45) 0%, rgba(11, 10, 26, 0.82) 85%),
+    linear-gradient(180deg, rgba(11, 10, 26, 0.2) 0%, transparent 25%, transparent 75%, rgba(11, 10, 26, 0.38) 100%);
 }
 
 .hero-video-wrapper {
@@ -524,7 +524,7 @@ body {
   transform: translate(-50%, -50%);
   pointer-events: none;
   border: none;
-  opacity: 0.35; /* Adjusted transparency for visibility */
+  opacity: 0.45; /* Adjusted transparency for visibility */
   mix-blend-mode: screen; /* Lightens and blends with dark background */
 }
 
@@ -1350,9 +1350,7 @@ body {
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, transparent 42%),
-    var(--bg-panel);
+  background: #0f0e26;
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.02) inset,
     0 28px 60px -36px rgba(0, 0, 0, 0.65);
@@ -2117,13 +2115,13 @@ html.js-ready [data-reveal]:not(.is-visible) {
 }
 
 .stage--cta .btn-primary {
-  background: #fff;
-  color: var(--bg);
+  background: var(--se-purple);
+  color: #fff;
 }
 
 .stage--cta .btn-primary:hover {
   background: var(--accent-bright);
-  color: var(--bg);
+  color: #fff;
 }
 
 /* ---- Footer grid ---- */
