@@ -2748,18 +2748,18 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #111111;
-  color: #ffffff;
-  padding: 8px 16px;
+  background: transparent;
+  color: #0f0f25;
+  padding: 7px 15px;
   border-radius: 99px;
   font-size: 0.85rem;
   font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 1.5px solid #0f0f25;
+  transition: all 0.2s ease;
 }
 
 .features-pill-tag svg {
-  color: #ffffff;
+  color: #0f0f25;
   stroke-width: 2px;
 }
 
