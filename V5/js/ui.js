@@ -24,6 +24,8 @@ function initMegaMenu() {
     panel.hidden = !open;
   };
 
+  let closeTimeout;
+
   const closeAll = (except) => {
     items.forEach((item) => {
       if (item === except) return;
@@ -33,6 +35,10 @@ function initMegaMenu() {
 
   const openItem = (item) => {
     if (suppressOpen) return;
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      closeTimeout = null;
+    }
     const link = item.querySelector(".nav-link--mega, .nav-link");
     const panel = item.querySelector(".mega-panel, .dropdown-panel");
     closeAll(item);
@@ -49,6 +55,13 @@ function initMegaMenu() {
     if (panel) setPanelState(panel, false);
   };
 
+  const scheduleClose = (item) => {
+    if (closeTimeout) clearTimeout(closeTimeout);
+    closeTimeout = setTimeout(() => {
+      closeItem(item);
+    }, 180); // 180ms buffer keeps panel open while crossing gaps
+  };
+
   items.forEach((item) => {
     const link = item.querySelector(".nav-link--mega, .nav-link");
     const panel = item.querySelector(".mega-panel, .dropdown-panel");
@@ -57,7 +70,7 @@ function initMegaMenu() {
     setPanelState(panel, false);
 
     item.addEventListener("mouseenter", () => openItem(item));
-    item.addEventListener("mouseleave", () => closeItem(item));
+    item.addEventListener("mouseleave", () => scheduleClose(item));
 
     // Keyboard: open when focus enters the trigger or panel
     item.addEventListener("focusin", () => openItem(item));
