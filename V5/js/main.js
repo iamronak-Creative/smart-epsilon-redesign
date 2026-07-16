@@ -22,6 +22,7 @@ import {
 } from "./sections.js";
 import { initUI } from "./ui.js";
 import { initVoicesSlider } from "./voices-slider.js";
+import { initShootingStarsGrid } from "./shooting-stars.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,6 +57,7 @@ function boot() {
   initHeroMap();
   initUI();
   initVoicesSlider();
+  initShootingStarsGrid();
   initHeaderScroll();
   initScrollProgress();
   initReveals();

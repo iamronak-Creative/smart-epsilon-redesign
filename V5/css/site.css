@@ -681,7 +681,7 @@ body {
 
 @media (max-width: 640px) {
   .hero-title {
-    font-size: clamp(2.35rem, 9vw, 3.25rem);
+    font-size: clamp(1.65rem, 8vw, 2.75rem);
     max-width: none;
   }
 }
@@ -825,70 +825,69 @@ body {
   padding-inline: var(--gutter);
 }
 
-/* ---- PROBLEM BG GRID & TRAVELING DOTS ---- */
+/* ---- SHOOTING STARS GRID BG ---- */
 .problem-grid-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 24px;
-  padding: 24px;
   opacity: 0.85;
   pointer-events: none;
   overflow: hidden;
+  background: linear-gradient(180deg, #f8fbff 0%, #eaf4ff 52%, #f8fbff 100%);
 }
 
-.problem-grid-cell {
-  position: relative;
-  border: 1px solid rgba(139, 127, 212, 0.12);
-  border-radius: 16px;
-  background: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
-}
-
-.cell-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(139, 127, 212, 0.3);
-}
-
-.traveling-dot {
+.shooting-stars-grid-overlay {
+  pointer-events: none;
   position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--se-purple);
-  box-shadow: 0 0 12px var(--se-purple);
+  inset: 0;
+  z-index: 1;
+  opacity: 0.6;
+  background-image: linear-gradient(to right, rgba(14, 165, 233, 0.13) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(14, 165, 233, 0.13) 1px, transparent 1px);
+  background-size: var(--shooting-stars-grid-size) var(--shooting-stars-grid-size);
+}
+
+.shooting-stars-radial-mask {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
   z-index: 2;
+  background: radial-gradient(circle at center, transparent 0%, rgba(255, 255, 255, 0.3) 54%, rgba(255, 255, 255, 0.92) 100%);
 }
 
-.traveling-dot--1 {
-  animation: travel-path-1 15s linear infinite;
+.shooting-stars-glow {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: radial-gradient(circle at var(--shooting-stars-glow-x) var(--shooting-stars-glow-y), rgba(8, 145, 178, 0.28), transparent 34%),
+              radial-gradient(circle at 72% 72%, rgba(99, 102, 241, 0.18), transparent 30%);
 }
 
-.traveling-dot--2 {
-  animation: travel-path-2 20s linear infinite;
+.static-stars-container,
+.shooting-stars-container {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
 }
 
-@keyframes travel-path-1 {
-  0% { top: 15%; left: 12%; }
-  25% { top: 15%; left: 88%; }
-  50% { top: 85%; left: 88%; }
-  75% { top: 85%; left: 12%; }
-  100% { top: 15%; left: 12%; }
+.static-star {
+  position: absolute;
+  border-radius: 50%;
+  background: #0891b2;
+  box-shadow: 0 0 12px rgba(14, 165, 233, 0.5);
+  transform: translate(-50%, -50%);
 }
 
-@keyframes travel-path-2 {
-  0% { top: 85%; left: 62%; }
-  33% { top: 15%; left: 62%; }
-  66% { top: 15%; left: 38%; }
-  100% { top: 85%; left: 62%; }
+.shooting-runner {
+  position: absolute;
+  border-radius: 999px;
+}
+
+@media (max-width: 640px) {
+  .max-sm-hidden {
+    display: none !important;
+  }
 }
 
 @media (min-width: 900px) {
