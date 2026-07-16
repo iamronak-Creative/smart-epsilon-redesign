@@ -26,7 +26,7 @@ import { initVoicesSlider } from "./voices-slider.js";
 gsap.registerPlugin(ScrollTrigger);
 
 function initWordCycler() {
-  const words = ["logistics", "barcodes", "CCTV feeds", "payouts", "QR codes"];
+  const words = ["logistics", "barcodes", "CCTV", "payouts", "QR codes"];
   let wordIdx = 0;
   const wordEl = document.getElementById("cycle-word");
   if (!wordEl) return;
