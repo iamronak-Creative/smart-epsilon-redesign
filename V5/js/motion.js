@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const PROBLEM_DATA = [
   {
     index: "01",
-    heading: "Counterfeits drain your margin.",
+    heading: "Counterfeits quietly drain your margin, damage customer trust, and bleed revenue.",
     text: "SHIELD gives every unit a cloud-bound identity. Customers verify authenticity by scanning — clones surface the moment they appear.",
     // Shield + QR mark — authenticity / fake detection
     svg: [
@@ -27,7 +27,7 @@ const PROBLEM_DATA = [
   },
   {
     index: "02",
-    heading: "Retailers have no reason to push you.",
+    heading: "Retailers have no reason to push your product when competitors offer daily rewards.",
     text: "Your team visits once a month. A competitor's loyalty program runs every day. Reward every genuine scan at the shelf.",
     // Storefront + gift — loyalty / retailer rewards
     svg: [
@@ -43,7 +43,7 @@ const PROBLEM_DATA = [
   },
   {
     index: "03",
-    heading: "Blind spots past the factory gate.",
+    heading: "Blind spots past the factory gate obscure product flow and hide inventory leaks.",
     text: "As networks grow, inventory vanishes between nodes. TrakNode maps every handoff — depots, distributors, retailers — in real time.",
     // Network map — visibility / warehouse tracking
     svg: [
