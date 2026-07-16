@@ -1209,7 +1209,7 @@ body {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #fff, var(--accent-bright));
+  background: linear-gradient(135deg, var(--ink), #4a3ab0);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1221,7 +1221,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #4a3ab0;
 }
 
 /* ---- CLIENTS ---- */
