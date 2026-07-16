@@ -662,13 +662,14 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(1.5rem, 5vw, 5.35rem);
+  font-size: clamp(1.5rem, 4.5vw, 4.25rem);
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.038em;
   margin: 0;
   max-width: 42ch;
   text-wrap: balance;
+  padding-inline: 1.5rem;
 }
 
 .hero-title .t-accent {
@@ -804,6 +805,9 @@ body {
 }
 
 .problem-sticky {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
   min-height: 100vh;
   display: grid;
   place-items: center;
@@ -811,12 +815,80 @@ body {
 }
 
 .problem-stage {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   width: 100%;
   max-width: var(--max);
   padding-inline: var(--gutter);
+}
+
+/* ---- PROBLEM BG GRID & TRAVELING DOTS ---- */
+.problem-grid-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 24px;
+  padding: 24px;
+  opacity: 0.85;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.problem-grid-cell {
+  position: relative;
+  border: 1px solid rgba(139, 127, 212, 0.12);
+  border-radius: 16px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+}
+
+.cell-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(139, 127, 212, 0.3);
+}
+
+.traveling-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--se-purple);
+  box-shadow: 0 0 12px var(--se-purple);
+  z-index: 2;
+}
+
+.traveling-dot--1 {
+  animation: travel-path-1 15s linear infinite;
+}
+
+.traveling-dot--2 {
+  animation: travel-path-2 20s linear infinite;
+}
+
+@keyframes travel-path-1 {
+  0% { top: 15%; left: 12%; }
+  25% { top: 15%; left: 88%; }
+  50% { top: 85%; left: 88%; }
+  75% { top: 85%; left: 12%; }
+  100% { top: 15%; left: 12%; }
+}
+
+@keyframes travel-path-2 {
+  0% { top: 85%; left: 62%; }
+  33% { top: 15%; left: 62%; }
+  66% { top: 15%; left: 38%; }
+  100% { top: 85%; left: 62%; }
 }
 
 @media (min-width: 900px) {
