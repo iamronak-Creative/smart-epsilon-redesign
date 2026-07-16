@@ -500,13 +500,21 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  pointer-events: none;
 }
 
-.hero-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.13;
+.hero-video-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* 16:9 Aspect Ratio */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 16:9 Aspect Ratio */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: none;
+  opacity: 0.14;
   mix-blend-mode: multiply;
 }
 
@@ -514,6 +522,7 @@ body {
   position: absolute;
   inset: 0;
   background: transparent;
+  pointer-events: none;
 }
 
 .hero-map {
