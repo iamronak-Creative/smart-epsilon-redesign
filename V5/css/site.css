@@ -1309,6 +1309,8 @@ body {
 }
 
 .cta-shell {
+  position: relative;
+  z-index: 2;
   max-width: var(--max);
   margin-inline: auto;
   padding-inline: var(--gutter);
