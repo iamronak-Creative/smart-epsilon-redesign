@@ -60,13 +60,6 @@ html.lenis body {
   color: var(--ink);
 }
 
-.site-header:not(.is-scrolled) .mega-panel {
-  --bg-elevated: #0e0d1a;
-  --line-strong: rgba(255, 255, 255, 0.16);
-  --ink: #f4f3f8;
-  --ink-soft: rgba(244, 243, 248, 0.62);
-}
-
 /* ---- Base ---- */
 body {
   background: var(--bg);
