@@ -2223,3 +2223,8 @@ html.js-ready [data-reveal]:not(.is-visible) {
 h1, h2, h3, h4 {
   color: var(--ink);
 }
+
+h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-tile h3, .voices-head__title, .mega-link-text strong {
+  font-family: var(--font-display) !important;
+  font-weight: 400 !important;
+}
