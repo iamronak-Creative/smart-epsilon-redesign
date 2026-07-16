@@ -30,7 +30,7 @@ html.lenis body {
   --se-purple: #6b62ac;
   --se-teal: #0d9488;
   --gutter: clamp(1.25rem, 4vw, 3rem);
-  --max: 1240px;
+  --max: 1440px;
   --nav-h: 72px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --radius: 16px;

@@ -57,7 +57,7 @@
 
   --section-pad-y: clamp(4.5rem, 10vh, 7.5rem);
   --gutter: clamp(1.25rem, 4vw, 3rem);
-  --content-max: 1280px;
+  --content-max: 1440px;
   --content-narrow: 720px;
 
   --radius-sm: 8px;
