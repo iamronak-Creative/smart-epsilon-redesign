@@ -12,7 +12,7 @@ const PROBLEM_DATA = [
   {
     index: "01",
     heading: "Counterfeits quietly drain your margin, damage customer trust, and bleed revenue.",
-    text: "SHIELD gives every unit a cloud-bound identity. Customers verify authenticity by scanning — clones surface the moment they appear.",
+    text: "Smart Epsilon's Platform gives every unit a cloud-based identity. Customers verify authenticity with a quick scan, and cloned codes are flagged the moment they appear.",
     // Shield + QR mark — authenticity / fake detection
     svg: [
       '<path fill="none" stroke="var(--accent-bright)" stroke-width="2.8" stroke-linejoin="round" d="M50 12 L78 24 V48 C78 68 64 82 50 88 C36 82 22 68 22 48 V24 Z"/>',
@@ -43,8 +43,8 @@ const PROBLEM_DATA = [
   },
   {
     index: "03",
-    heading: "Blind spots past the factory gate obscure product flow and hide inventory leaks.",
-    text: "As networks grow, inventory vanishes between nodes. TrakNode maps every handoff — depots, distributors, retailers — in real time.",
+    heading: "Once products leave the factory, visibility fades and inventory can slip through the cracks.",
+    text: "Smart Epsilon’s Platform tracks every handoff across depots, distributors, and retailers in real time, so your team always knows where products are and where losses begin.",
     // Network map — visibility / warehouse tracking
     svg: [
       '<circle cx="50" cy="50" r="36" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-dasharray="4 5" opacity="0.75"/>',
