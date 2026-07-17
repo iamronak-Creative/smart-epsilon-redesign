@@ -30,12 +30,12 @@ export function initShootingStarsGrid() {
     pattern.setAttribute("x", "-1");
     pattern.setAttribute("y", "-1");
 
-    // Light-colored rounded boxes on white background (2px spacing border outline)
+    // Light-colored rounded boxes on white background (1px spacing border outline)
     const boxRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-    boxRect.setAttribute("x", "2");
-    boxRect.setAttribute("y", "2");
-    boxRect.setAttribute("width", `${squareSize - 4}`);
-    boxRect.setAttribute("height", `${squareSize - 4}`);
+    boxRect.setAttribute("x", "1");
+    boxRect.setAttribute("y", "1");
+    boxRect.setAttribute("width", `${squareSize - 2}`);
+    boxRect.setAttribute("height", `${squareSize - 2}`);
     boxRect.setAttribute("rx", "2");
     boxRect.setAttribute("ry", "2");
     boxRect.setAttribute("fill", "#f4f3f8"); // Light colored box
@@ -65,10 +65,10 @@ export function initShootingStarsGrid() {
     for (let r = 0; r < rows; r++) {
       for (let c = 0; c < cols; c++) {
         const cell = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-        cell.setAttribute("x", c * squareSize + 2);
-        cell.setAttribute("y", r * squareSize + 2);
-        cell.setAttribute("width", squareSize - 4);
-        cell.setAttribute("height", squareSize - 4);
+        cell.setAttribute("x", c * squareSize + 1);
+        cell.setAttribute("y", r * squareSize + 1);
+        cell.setAttribute("width", squareSize - 2);
+        cell.setAttribute("height", squareSize - 2);
         cell.setAttribute("rx", "2");
         cell.setAttribute("ry", "2");
         cell.setAttribute("class", "interactive-grid-cell");

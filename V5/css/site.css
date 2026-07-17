@@ -2421,6 +2421,26 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
   overflow: hidden;
 }
 
+.coverflow-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.68);
+  border-radius: 24px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 15;
+}
+
+.coverflow-card.inactive::after {
+  opacity: 1;
+}
+
+.coverflow-card.active::after {
+  opacity: 0;
+}
+
 .coverflow-card-grid {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
