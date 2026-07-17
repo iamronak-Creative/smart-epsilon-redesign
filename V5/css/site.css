@@ -2808,3 +2808,21 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
   opacity: 1;
   filter: none !important;
 }
+
+/* Section padding global overrides (100px top and bottom spacing) */
+.stage:not(.stage--hero) {
+  padding-block: 100px !important;
+}
+
+/* Blog slider fading mask overlay */
+#blog::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(80px, 15vw, 220px);
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  pointer-events: none;
+  z-index: 10;
+}
