@@ -843,42 +843,76 @@
   </section>
 
   <!-- BLOGS -->
-  <section class="stage stage--cases" id="blog" style="border-top: 1px solid var(--line); padding-top: 5rem;">
-    <div class="stage__inner" style="margin-bottom:2rem" data-reveal>
-      <p class="eyebrow">Blog &amp; Insights</p>
-      <h2 style="font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;letter-spacing:-0.02em;margin:0.5rem 0 0">Latest supply chain thoughts.</h2>
+  <section class="stage" id="blog" style="border-top: 1px solid var(--line); padding-top: 5rem; overflow: hidden; position: relative;">
+    <div class="stage__inner" style="margin-bottom: 2.5rem; display: flex; justify-content: space-between; align-items: flex-end;" data-reveal>
+      <div>
+        <p class="eyebrow">Blog &amp; Insights</p>
+        <h2 style="font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;letter-spacing:-0.02em;margin:0.5rem 0 0">Latest supply chain thoughts.</h2>
+      </div>
+      <!-- Slider controls -->
+      <div class="blog-controls" style="display: flex; gap: 10px;">
+        <button class="blog-btn blog-btn--prev" aria-label="Previous slide" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-strong); background: var(--bg-elevated); color: var(--ink); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s;" onmouseenter="this.style.borderColor='var(--accent)'; this.style.color='var(--accent)';" onmouseleave="this.style.borderColor='var(--line-strong)'; this.style.color='var(--ink)';">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="blog-btn blog-btn--next" aria-label="Next slide" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-strong); background: var(--bg-elevated); color: var(--ink); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s;" onmouseenter="this.style.borderColor='var(--accent)'; this.style.color='var(--accent)';" onmouseleave="this.style.borderColor='var(--line-strong)'; this.style.color='var(--ink)';">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
     </div>
-    <div class="cases-bento" data-reveal>
-      <article class="case-tile case-tile--hero">
-        <div class="case-tile__media">
-          <img src="./assets/product/traknode-ui.webp" alt="The future of unit-level serialization" width="800" height="600" loading="lazy" />
-        </div>
-        <div class="case-tile__body">
-          <p class="case-tile__tag">Technology</p>
-          <h3>The future of unit-level serialization</h3>
-          <p>How incoming GS1 EPCIS 2.0 regulations are shaping traceability standards worldwide.</p>
-        </div>
-      </article>
-      <article class="case-tile">
-        <div class="case-tile__media">
-          <img src="./assets/product/kavach.webp" alt="Combating grey-market diversion" width="600" height="400" loading="lazy" />
-        </div>
-        <div class="case-tile__body">
-          <p class="case-tile__tag">Supply Chain</p>
-          <h3>Combating grey-market diversion</h3>
-          <p>Practical steps to stop unauthorized distributors from leaking stocks.</p>
-        </div>
-      </article>
-      <article class="case-tile">
-        <div class="case-tile__media">
-          <img src="./assets/product/ai-video.webp" alt="Leveraging AI in logistics" width="600" height="400" loading="lazy" />
-        </div>
-        <div class="case-tile__body">
-          <p class="case-tile__tag">Consumer Trust</p>
-          <h3>Leveraging AI in logistics</h3>
-          <p>How next-generation computer vision audits warehouse compliance in real time.</p>
-        </div>
-      </article>
+
+    <!-- Slider container -->
+    <div class="stage__inner" style="overflow: hidden; padding-bottom: 2rem;" data-reveal>
+      <div class="blog-slider-track" style="display: flex; gap: 2rem; transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1); width: max-content;">
+        
+        <!-- Blog 1 -->
+        <article class="blog-card" style="width: 380px; flex-shrink: 0; background: #ffffff; border-radius: 16px; border: 1px solid rgba(17, 28, 46, 0.06); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02); display: flex; flex-direction: column;">
+          <div style="aspect-ratio: 16 / 10; overflow: hidden; position: relative;">
+            <img src="./assets/product/traknode-ui.webp" alt="The future of unit-level serialization" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <div style="padding: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; flex: 1;">
+            <span style="font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em;">Technology</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; line-height: 1.4; color: var(--ink); margin: 0;">The future of unit-level serialization</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--ink-soft); margin: 0;">How incoming GS1 EPCIS 2.0 regulations are shaping traceability standards worldwide.</p>
+          </div>
+        </article>
+
+        <!-- Blog 2 -->
+        <article class="blog-card" style="width: 380px; flex-shrink: 0; background: #ffffff; border-radius: 16px; border: 1px solid rgba(17, 28, 46, 0.06); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02); display: flex; flex-direction: column;">
+          <div style="aspect-ratio: 16 / 10; overflow: hidden; position: relative;">
+            <img src="./assets/product/kavach.webp" alt="Combating grey-market diversion" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <div style="padding: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; flex: 1;">
+            <span style="font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em;">Supply Chain</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; line-height: 1.4; color: var(--ink); margin: 0;">Combating grey-market diversion</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--ink-soft); margin: 0;">Practical steps to stop unauthorized distributors from leaking stocks.</p>
+          </div>
+        </article>
+
+        <!-- Blog 3 -->
+        <article class="blog-card" style="width: 380px; flex-shrink: 0; background: #ffffff; border-radius: 16px; border: 1px solid rgba(17, 28, 46, 0.06); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02); display: flex; flex-direction: column;">
+          <div style="aspect-ratio: 16 / 10; overflow: hidden; position: relative;">
+            <img src="./assets/product/ai-video.webp" alt="Leveraging AI in logistics" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <div style="padding: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; flex: 1;">
+            <span style="font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em;">Consumer Trust</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; line-height: 1.4; color: var(--ink); margin: 0;">Leveraging AI in logistics</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--ink-soft); margin: 0;">How next-generation computer vision audits warehouse compliance in real time.</p>
+          </div>
+        </article>
+
+        <!-- Blog 4 -->
+        <article class="blog-card" style="width: 380px; flex-shrink: 0; background: #ffffff; border-radius: 16px; border: 1px solid rgba(17, 28, 46, 0.06); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02); display: flex; flex-direction: column;">
+          <div style="aspect-ratio: 16 / 10; overflow: hidden; position: relative;">
+            <img src="./assets/product/case-agro.webp" alt="Smart Seed Protection" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <div style="padding: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; flex: 1;">
+            <span style="font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em;">Agriculture</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; line-height: 1.4; color: var(--ink); margin: 0;">Smart Seed Protection</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--ink-soft); margin: 0;">Defending crop yield with item-level authenticity verification.</p>
+          </div>
+        </article>
+
+      </div>
     </div>
   </section>
 
@@ -967,12 +1001,10 @@
 </main>
 
 <footer class="site-footer" style="background: #090714; color: #f0f4ff; padding: 5rem 2rem 3.5rem; font-family: var(--font-body); position: relative; overflow: hidden; border-top: 1px solid rgba(255, 255, 255, 0.05);">
-  <div class="stage__inner" style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: start;">
+  <div class="stage__inner" style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: end;">
     
-    <!-- Left Section: Top border line, contact card, and links columns -->
+    <!-- Left Section: Contact card, links columns, and bottom border line -->
     <div style="display: flex; flex-direction: column; gap: 2.5rem; width: 100%;">
-      <!-- Top border line -->
-      <div style="height: 2px; background: #6b62ac; width: 100%;"></div>
       
       <!-- Columns Grid -->
       <div style="display: grid; grid-template-columns: 1.15fr 0.85fr 0.95fr 0.95fr; gap: 2.5rem; align-items: start; width: 100%;">
@@ -1034,11 +1066,14 @@
           </div>
         </div>
 
+        </div>
       </div>
+      <!-- Bottom border line -->
+      <div style="height: 2px; background: #6b62ac; width: 100%;"></div>
     </div>
 
     <!-- Right Section: Big brand symbol watermark -->
-    <div style="width: 280px; flex-shrink: 0; display: flex; justify-content: flex-end; align-items: flex-start; padding-top: 0; margin-top: 0;">
+    <div style="width: 280px; flex-shrink: 0; display: flex; justify-content: flex-end; align-items: flex-end; padding-top: 0; margin-top: 0; align-self: stretch;">
       <img class="footer-brand-img" src="./assets/brand/symbol.png" alt="Smart Epsilon Symbol" width="280" height="280" style="display: block; margin-top: 0; object-fit: contain;" />
     </div>
 

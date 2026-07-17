@@ -2456,6 +2456,16 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
   flex-direction: column;
   justify-content: center;
   text-align: left;
+  transition: opacity 0.3s ease;
+}
+
+.coverflow-card.inactive .coverflow-card-content {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.coverflow-card.active .coverflow-card-content {
+  opacity: 1 !important;
 }
 
 @media (max-width: 768px) {

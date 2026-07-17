@@ -10,6 +10,7 @@ export function initUI() {
   initProductSelectLinks();
   initAccordion();
   initForms();
+  initBlogSlider();
 }
 
 function initMegaMenu() {
@@ -214,6 +215,47 @@ function initForms() {
       }
     });
   });
+}
+
+function initBlogSlider() {
+  const track = document.querySelector('.blog-slider-track');
+  const cards = document.querySelectorAll('.blog-card');
+  const btnPrev = document.querySelector('.blog-btn--prev');
+  const btnNext = document.querySelector('.blog-btn--next');
+  if (!track || !cards.length) return;
+
+  let currentIndex = 0;
+  const getSlideWidth = () => {
+    const card = cards[0];
+    const width = card.offsetWidth;
+    const margin = parseFloat(window.getComputedStyle(track).gap) || 32;
+    return width + margin;
+  };
+
+  const updateSlider = () => {
+    const maxIndex = cards.length - (window.innerWidth < 768 ? 1 : 3);
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    const moveX = currentIndex * getSlideWidth();
+    track.style.transform = `translateX(-${moveX}px)`;
+  };
+
+  btnPrev?.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+
+  btnNext?.addEventListener('click', () => {
+    const maxIndex = cards.length - (window.innerWidth < 768 ? 1 : 3);
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+
+  window.addEventListener('resize', updateSlider);
 }
 
 export { prefersReducedMotion };

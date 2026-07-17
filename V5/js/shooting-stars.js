@@ -17,6 +17,7 @@ export function initShootingStarsGrid() {
     svg.setAttribute("width", "100%");
     svg.setAttribute("height", "100%");
     svg.setAttribute("class", "interactive-grid-pattern-svg");
+    svg.style.backgroundColor = "#ffffff"; // Keep background white
 
     const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
     const pattern = document.createElementNS("http://www.w3.org/2000/svg", "pattern");
@@ -29,13 +30,17 @@ export function initShootingStarsGrid() {
     pattern.setAttribute("x", "-1");
     pattern.setAttribute("y", "-1");
 
-    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("d", `M ${squareSize} 0 L 0 0 0 ${squareSize}`);
-    path.setAttribute("fill", "none");
-    path.setAttribute("stroke", strokeColor);
-    path.setAttribute("stroke-width", "3");
+    // Light-colored rounded boxes on white background (2px spacing border outline)
+    const boxRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    boxRect.setAttribute("x", "2");
+    boxRect.setAttribute("y", "2");
+    boxRect.setAttribute("width", `${squareSize - 4}`);
+    boxRect.setAttribute("height", `${squareSize - 4}`);
+    boxRect.setAttribute("rx", "2");
+    boxRect.setAttribute("ry", "2");
+    boxRect.setAttribute("fill", "#f4f3f8"); // Light colored box
 
-    pattern.appendChild(path);
+    pattern.appendChild(boxRect);
     defs.appendChild(pattern);
     svg.appendChild(defs);
 
@@ -60,10 +65,12 @@ export function initShootingStarsGrid() {
     for (let r = 0; r < rows; r++) {
       for (let c = 0; c < cols; c++) {
         const cell = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-        cell.setAttribute("x", c * squareSize);
-        cell.setAttribute("y", r * squareSize);
-        cell.setAttribute("width", squareSize);
-        cell.setAttribute("height", squareSize);
+        cell.setAttribute("x", c * squareSize + 2);
+        cell.setAttribute("y", r * squareSize + 2);
+        cell.setAttribute("width", squareSize - 4);
+        cell.setAttribute("height", squareSize - 4);
+        cell.setAttribute("rx", "2");
+        cell.setAttribute("ry", "2");
         cell.setAttribute("class", "interactive-grid-cell");
         cellsSvg.appendChild(cell);
       }
