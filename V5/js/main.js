@@ -28,20 +28,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 function initWordCycler() {
   const phrases = [
-    { prefix: "rewarding", word: "payouts", suffix: "lasting loyalty" },
-    { prefix: "seamless", word: "QR codes", suffix: "a shield of trust" },
-    { prefix: "connected", word: "logistics", suffix: "real-time visibility" },
-    { prefix: "intelligent", word: "CCTV recordings", suffix: "actionable insights" }
+    { word: "payouts", suffix: "loyalty" },
+    { word: "QR", suffix: "authenticity" },
+    { word: "logistics", suffix: "control" },
+    { word: "CCTV", suffix: "foresight" }
   ];
   let idx = 0;
-  const prefixEl = document.getElementById("cycle-prefix");
   const wordEl = document.getElementById("cycle-word");
   const suffixEl = document.getElementById("cycle-suffix");
 
-  if (!wordEl || !prefixEl || !suffixEl) return;
+  if (!wordEl || !suffixEl) return;
 
   setInterval(() => {
-    gsap.to([prefixEl, wordEl, suffixEl], {
+    gsap.to([wordEl, suffixEl], {
       y: -15,
       opacity: 0,
       duration: 0.35,
@@ -49,10 +48,9 @@ function initWordCycler() {
       stagger: 0.05,
       onComplete: () => {
         idx = (idx + 1) % phrases.length;
-        prefixEl.textContent = phrases[idx].prefix;
         wordEl.textContent = phrases[idx].word;
         suffixEl.textContent = phrases[idx].suffix;
-        gsap.fromTo([prefixEl, wordEl, suffixEl],
+        gsap.fromTo([wordEl, suffixEl],
           { y: 15, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.45, ease: "power2.out", stagger: 0.05 }
         );

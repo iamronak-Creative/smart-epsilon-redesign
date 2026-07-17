@@ -658,7 +658,8 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-#cycle-word {
+#cycle-word,
+#cycle-suffix {
   display: inline-block;
   text-align: center;
   font-style: italic;
