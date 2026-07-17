@@ -28,10 +28,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 function initWordCycler() {
   const phrases = [
-    { word: "payouts", suffix: "loyalty" },
-    { word: "QR", suffix: "authenticity" },
-    { word: "logistics", suffix: "control" },
-    { word: "CCTV", suffix: "foresight" }
+    { word: "payouts", suffix: "loyalty." },
+    { word: "QR", suffix: "authenticity." },
+    { word: "logistics", suffix: "control." },
+    { word: "CCTV", suffix: "foresight." }
   ];
   let idx = 0;
   const wordEl = document.getElementById("cycle-word");
