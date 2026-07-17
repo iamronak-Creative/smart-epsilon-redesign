@@ -2825,7 +2825,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
 }
 
 /* Blog slider fading mask overlays */
-#blog::before {
+.blog-slider-wrapper::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2837,7 +2837,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
   z-index: 10;
 }
 
-#blog::after {
+.blog-slider-wrapper::after {
   content: "";
   position: absolute;
   top: 0;

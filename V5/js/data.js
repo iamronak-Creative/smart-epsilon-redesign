@@ -12,7 +12,7 @@ export const nav = {
   solutions: [
     { name: "TrakNode — Track & Trace", icon: "route", href: "#track-trace", hook: "Serialization & real-time visibility" },
     { name: "SHIELD — Anticounterfeiting Solution", icon: "shield-check", href: "#kavach", hook: "Overt, covert & forensic protection" },
-    { name: "Loyalty & Rewards", icon: "gift", href: "#loyalty", hook: "Consumer & retailer engagement" },
+    { name: "Payment-linked Incentives", icon: "gift", href: "#loyalty", hook: "Distributor & retailer engagement" },
     { name: "AI Video Intelligence", icon: "video", href: "#ai-video", hook: "CCTV into supply chain intelligence" },
     { name: "Holographic Security Labels", icon: "hexagon", href: "#kavach", hook: "Tamper-evident labels, ordered online" },
   ],
@@ -86,10 +86,10 @@ export const platformModules = [
   {
     id: "loyalty",
     eyebrow: "Solution 03",
-    name: "Loyalty & Rewards",
+    name: "Payment-linked Incentives",
     icon: "gift",
     color: "#ffc978",
-    tagline: "Reward genuine purchases and build long-term consumer relationships.",
+    tagline: "Reward genuine purchases and build long-term distributor and retailer relationships.",
     features: ["Earn points through product scans", "Redemption marketplace", "Channel loyalty programs"],
   },
   {
@@ -200,7 +200,7 @@ export const faqs = [
 
 export const footer = {
   columns: [
-    { title: "Products", links: [{ label: "TrakNode — Track & Trace", href: "#track-trace" }, { label: "SHIELD — Anti-Counterfeit", href: "#kavach" }, { label: "Loyalty Platform", href: "#loyalty" }, { label: "AI Video Intelligence", href: "#ai-video" }] },
+    { title: "Products", links: [{ label: "TrakNode — Track & Trace", href: "#track-trace" }, { label: "SHIELD — Anti-Counterfeit", href: "#kavach" }, { label: "Payment-linked Incentives", href: "#loyalty" }, { label: "AI Video Intelligence", href: "#ai-video" }] },
     { title: "Industries", links: [{ label: "Agrochemicals", href: "#industries" }, { label: "Lubricants & Auto", href: "#industries" }, { label: "Seeds", href: "#industries" }, { label: "Pharmaceuticals", href: "#industries" }, { label: "CPG & Foods", href: "#industries" }] },
     { title: "Company", links: [{ label: "Why Smart Epsilon", href: "#why" }, { label: "Case Studies", href: "#cases" }, { label: "Careers", href: "#" }, { label: "Contact", href: "#cta" }] },
   ],
