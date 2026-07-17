@@ -1675,7 +1675,7 @@ html.js-ready [data-reveal]:not(.is-visible) {
 }
 
 .why-head {
-  max-width: 38rem;
+  max-width: 50rem !important;
   margin-bottom: 2.75rem;
 }
 
@@ -1854,7 +1854,7 @@ html.js-ready [data-reveal]:not(.is-visible) {
 }
 
 .voices-head {
-  max-width: 36rem;
+  max-width: 50rem !important;
   margin-bottom: clamp(2.25rem, 5vh, 3.25rem);
 }
 
