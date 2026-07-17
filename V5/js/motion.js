@@ -27,7 +27,7 @@ const PROBLEM_DATA = [
   },
   {
     index: "02",
-    heading: "Retailers have no reason to push your product when competitors offer daily rewards.",
+    heading: "Distributors and Retailers have no reason to push your product when competitors offer daily rewards.",
     text: "Your team visits once a month. A competitor's loyalty program runs every day. Reward every genuine scan at the shelf.",
     // Storefront + gift — loyalty / retailer rewards
     svg: [
