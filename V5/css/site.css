@@ -391,11 +391,11 @@ body {
 }
 
 .site-header {
-  background: rgba(255, 255, 255, 0.75) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border-bottom: 1px solid rgba(17, 28, 46, 0.08) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03) !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(28px) !important;
+  -webkit-backdrop-filter: blur(28px) !important;
+  border-bottom: 1px solid rgba(107, 98, 172, 0.16) !important;
+  box-shadow: 0 8px 32px rgba(107, 98, 172, 0.05) !important;
   transition: padding-block 0.3s, background 0.3s;
 }
 
@@ -2807,9 +2807,20 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
   filter: none !important;
 }
 
-/* Section padding global overrides (100px top and bottom spacing) */
-.stage:not(.stage--hero) {
+/* Section padding global overrides (100px top and bottom spacing), excluding hero and grid section */
+.stage:not(.stage--hero):not(.stage--problem) {
   padding-block: 100px !important;
+}
+
+/* Inactive coverflow card content soft fading opacity */
+.coverflow-card.inactive .coverflow-card-content {
+  opacity: 0.3 !important;
+  transition: opacity 0.4s ease;
+}
+
+.coverflow-card.active .coverflow-card-content {
+  opacity: 1 !important;
+  transition: opacity 0.4s ease;
 }
 
 /* Blog slider fading mask overlays */
