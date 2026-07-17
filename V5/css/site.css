@@ -596,7 +596,7 @@ body {
 .hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 1200px;
+  max-width: 1400px;
   margin-inline: auto;
   text-align: center;
   display: flex;
