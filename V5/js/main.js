@@ -27,27 +27,38 @@ import { initShootingStarsGrid } from "./shooting-stars.js";
 gsap.registerPlugin(ScrollTrigger);
 
 function initWordCycler() {
-  const words = ["logistics", "barcodes", "CCTV", "payouts", "QR codes"];
-  let wordIdx = 0;
+  const phrases = [
+    { prefix: "rewarding", word: "payouts", suffix: "lasting loyalty" },
+    { prefix: "seamless", word: "QR codes", suffix: "a shield of trust" },
+    { prefix: "connected", word: "logistics", suffix: "real-time visibility" },
+    { prefix: "intelligent", word: "CCTV recordings", suffix: "actionable insights" }
+  ];
+  let idx = 0;
+  const prefixEl = document.getElementById("cycle-prefix");
   const wordEl = document.getElementById("cycle-word");
-  if (!wordEl) return;
+  const suffixEl = document.getElementById("cycle-suffix");
+
+  if (!wordEl || !prefixEl || !suffixEl) return;
 
   setInterval(() => {
-    gsap.to(wordEl, {
+    gsap.to([prefixEl, wordEl, suffixEl], {
       y: -15,
       opacity: 0,
       duration: 0.35,
       ease: "power2.in",
+      stagger: 0.05,
       onComplete: () => {
-        wordIdx = (wordIdx + 1) % words.length;
-        wordEl.textContent = words[wordIdx];
-        gsap.fromTo(wordEl,
+        idx = (idx + 1) % phrases.length;
+        prefixEl.textContent = phrases[idx].prefix;
+        wordEl.textContent = phrases[idx].word;
+        suffixEl.textContent = phrases[idx].suffix;
+        gsap.fromTo([prefixEl, wordEl, suffixEl],
           { y: 15, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.45, ease: "power2.out" }
+          { y: 0, opacity: 1, duration: 0.45, ease: "power2.out", stagger: 0.05 }
         );
       }
     });
-  }, 3000);
+  }, 4000);
 }
 
 function boot() {
