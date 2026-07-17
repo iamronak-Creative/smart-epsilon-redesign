@@ -75,7 +75,6 @@
       <img src="./assets/brand/logo.svg" alt="Smart Epsilon" width="170" height="47" />
     </a>
     <nav class="primary-nav" aria-label="Primary">
-      <a class="nav-link" href="#top">Home</a>
 
       <!-- Solutions Dropdown -->
       <div class="nav-item" data-mega>
@@ -804,9 +803,11 @@
 
   <!-- CASES -->
   <section class="stage stage--cases" id="cases">
-    <div class="stage__inner" style="margin-bottom:2rem" data-reveal>
-      <p class="eyebrow">Case studies</p>
-      <h2 style="font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;letter-spacing:-0.02em;margin:0.5rem 0 0">From the field.</h2>
+    <div class="stage__inner" style="max-width: 640px; margin-bottom: 2.5rem;" data-reveal>
+      <p class="eyebrow" style="color: var(--accent); margin-bottom: 0.75rem;">Case studies</p>
+      <h2 style="font-size: clamp(2.25rem, 5vw, 3.25rem); line-height: 1.1; margin: 0 0 1rem; color: var(--ink);">From the field.</h2>
+      <p style="font-size: 1.1rem; line-height: 1.6; color: var(--ink-soft); margin: 0 0 1rem; font-weight: 500;">Real-world impact across global logistics, agriculture, and manufacturing.</p>
+      <p style="font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft); opacity: 0.85; margin: 0;">How enterprises partner with Smart Epsilon to solve serialization hurdles, eliminate supply chain leakage, and build absolute trust.</p>
     </div>
     <div class="cases-bento" data-reveal>
       <article class="case-tile case-tile--hero">
@@ -844,11 +845,13 @@
 
   <!-- BLOGS -->
   <section class="stage" id="blog" style="border-top: 1px solid var(--line); padding-top: 5rem; overflow: hidden; position: relative;">
-    <div class="stage__inner" style="margin-bottom: 2.5rem; display: flex; justify-content: space-between; align-items: flex-end;" data-reveal>
-      <div>
-        <p class="eyebrow">Blog &amp; Insights</p>
-        <h2 style="font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;letter-spacing:-0.02em;margin:0.5rem 0 0">Latest supply chain thoughts.</h2>
-      </div>
+    <div class="stage__inner" style="max-width: 640px; margin-bottom: 2.5rem;" data-reveal>
+      <p class="eyebrow" style="color: var(--accent); margin-bottom: 0.75rem;">Blog &amp; Insights</p>
+      <h2 style="font-size: clamp(2.25rem, 5vw, 3.25rem); line-height: 1.1; margin: 0 0 1rem; color: var(--ink);">Latest supply chain thoughts.</h2>
+      <p style="font-size: 1.1rem; line-height: 1.6; color: var(--ink-soft); margin: 0 0 1rem; font-weight: 500;">Industry-leading articles on item-level visibility, GS1 standardizations, and anti-counterfeiting.</p>
+    </div>
+    <!-- Slider controls container -->
+    <div class="stage__inner" style="margin-bottom: 2rem; display: flex; justify-content: flex-end;" data-reveal>
       <!-- Slider controls -->
       <div class="blog-controls" style="display: flex; gap: 10px;">
         <button class="blog-btn blog-btn--prev" aria-label="Previous slide" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-strong); background: var(--bg-elevated); color: var(--ink); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s;" onmouseenter="this.style.borderColor='var(--accent)'; this.style.color='var(--accent)';" onmouseleave="this.style.borderColor='var(--line-strong)'; this.style.color='var(--ink)';">
@@ -1096,7 +1099,6 @@
     <button class="drawer-close nav-toggle" type="button" aria-label="Close menu"><svg class="icon" width="20" height="20"><use href="#icon-close"/></svg></button>
   </div>
   <nav class="nav-drawer-list" aria-label="Mobile">
-    <a href="#top">Home</a>
     <details class="nav-drawer-mega">
       <summary>Solutions</summary>
       <div class="nav-drawer-sub">

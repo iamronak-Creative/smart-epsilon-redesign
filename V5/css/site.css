@@ -390,64 +390,50 @@ body {
   margin-top: 3rem;
 }
 
+.site-header {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(17, 28, 46, 0.08) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03) !important;
+  transition: padding-block 0.3s, background 0.3s;
+}
+
 .site-header:not(.is-scrolled) {
-  background: transparent;
-  box-shadow: none;
-}
-
-.site-header:not(.is-scrolled) .brand img {
-  filter: brightness(0) invert(1);
-}
-
-.site-header:not(.is-scrolled) .nav-link {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.site-header:not(.is-scrolled) .nav-link:hover,
-.site-header:not(.is-scrolled) .nav-item.is-open > .nav-link {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.site-header:not(.is-scrolled) .nav-toggle {
-  border-color: rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
-}
-
-.site-header:not(.is-scrolled) .btn-primary.nav-cta {
-  background: var(--se-purple);
-  color: #fff;
-}
-
-.site-header:not(.is-scrolled) .btn-primary.nav-cta:hover {
-  background: var(--accent-bright);
+  padding-block: 1rem;
 }
 
 .site-header.is-scrolled {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--line);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding-block: 0.7rem;
 }
 
-.site-header.is-scrolled .brand img {
-  filter: none;
+.site-header .brand img {
+  filter: none !important;
 }
 
-.site-header.is-scrolled .nav-link {
-  color: var(--ink-soft);
+.site-header .nav-link {
+  color: var(--ink-soft) !important;
 }
 
-.site-header.is-scrolled .nav-link:hover,
-.site-header.is-scrolled .nav-item.is-open > .nav-link {
-  color: var(--accent);
-  background: rgba(15, 15, 37, 0.05);
+.site-header .nav-link:hover,
+.site-header .nav-item.is-open > .nav-link {
+  color: var(--accent) !important;
+  background: rgba(15, 15, 37, 0.05) !important;
 }
 
-.site-header.is-scrolled .btn-primary.nav-cta {
-  background: var(--accent);
-  color: #fff;
+.site-header .btn-primary.nav-cta {
+  background: var(--accent) !important;
+  color: #fff !important;
+}
+
+.site-header .btn-primary.nav-cta:hover {
+  background: var(--se-purple) !important;
+}
+
+.site-header .nav-toggle {
+  border-color: rgba(15, 15, 37, 0.12) !important;
+  background: rgba(15, 15, 37, 0.04) !important;
+  color: var(--ink) !important;
 }
 
 /* ---- Stages ---- */
@@ -2421,23 +2407,27 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
   overflow: hidden;
 }
 
-.coverflow-card::after {
+.coverflow-card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.coverflow-card-image::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.68);
-  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.55);
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.5s ease;
-  z-index: 15;
+  z-index: 5;
 }
 
-.coverflow-card.inactive::after {
+.coverflow-card.inactive .coverflow-card-image::after {
   opacity: 1;
 }
 
-.coverflow-card.active::after {
+.coverflow-card.active .coverflow-card-image::after {
   opacity: 0;
 }
 
@@ -2480,8 +2470,8 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
 }
 
 .coverflow-card.inactive .coverflow-card-content {
-  opacity: 0 !important;
-  pointer-events: none;
+  opacity: 1 !important;
+  pointer-events: auto;
 }
 
 .coverflow-card.active .coverflow-card-content {
@@ -2503,25 +2493,33 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
 }
 
 .coverflow-card.inactive {
-  background: #f1f0f7;
-  color: var(--ink-soft);
+  background: #f4f3f8 !important;
+  color: #111c2e !important;
+}
+
+.coverflow-card.inactive h3 {
+  color: #111c2e !important;
+}
+
+.coverflow-card.inactive p {
+  color: #444455 !important;
 }
 
 .coverflow-card.inactive .card-eyebrow {
-  color: rgba(107, 98, 172, 0.65);
+  color: #6b62ac !important;
 }
 
 .coverflow-card.inactive .card-icon-wrapper {
-  background: rgba(107, 98, 172, 0.08);
-  color: var(--accent);
+  background: rgba(107, 98, 172, 0.12) !important;
+  color: #6b62ac !important;
 }
 
 .coverflow-card.inactive .feature-item {
-  color: var(--ink-soft);
+  color: #444455 !important;
 }
 
 .coverflow-card.inactive .feature-icon {
-  color: var(--accent);
+  color: #6b62ac !important;
 }
 
 .coverflow-card.active {
@@ -2814,7 +2812,19 @@ h1, h2, h3, h4, h5, h6, .hero-title, .cta-intro__title, .problem-heading, .case-
   padding-block: 100px !important;
 }
 
-/* Blog slider fading mask overlay */
+/* Blog slider fading mask overlays */
+#blog::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(80px, 15vw, 220px);
+  height: 100%;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 10;
+}
+
 #blog::after {
   content: "";
   position: absolute;
