@@ -1,9 +1,5 @@
-import { ShootingStarsGrid } from "@/components/ui/shooting-stars-grid";
+import KineticTeamList from "@/components/ui/kinetic-team-hybrid";
 
-export default function Default() {
-  return (
-    <div className="p-6">
-      <ShootingStarsGrid />
-    </div>
-  );
+export default function DemoOne() {
+  return <KineticTeamList />;
 }

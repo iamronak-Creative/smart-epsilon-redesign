@@ -187,7 +187,7 @@ function initCoverflow() {
 
       const dist = Math.abs(diff);
       const scale = dist === 0 ? 1 : dist === 1 ? 0.85 : 0.72;
-      const opacity = dist === 0 ? 1 : dist === 1 ? 0.95 : 0.35;
+      const opacity = dist === 0 ? 1 : 0.5;
       const zIndex = 10 - dist;
       // Spread cards out dynamically depending on card size
       const isMobile = window.innerWidth < 768;
